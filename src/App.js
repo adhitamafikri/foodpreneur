@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
 import { BrowserRouter, Route } from 'react-router-dom';
+import 'antd/dist/antd.css';
+
 import Navigation from './components/Navigation';
 import Competition from './components/Page/Competition';
 import Festival from './components/Page/Festival';
@@ -13,8 +14,8 @@ class App extends Component {
         <div className="App">
           <Navigation />
           <Route exact path="/" component={Festival} />
-          <Route exact path="/competition" component={Competition} />
-          <Route exact path="/big-resto" component={BigResto} />
+          <Route path="/competition" component={Competition} />
+          <Route path="/big-resto" component={BigResto} />
         </div>
       </BrowserRouter>
     );

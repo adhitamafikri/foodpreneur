@@ -1,9 +1,7 @@
 import React from 'react';
 
-const Festival = () => {
-  return (
-    <h1>Festival</h1>
-  );
-}
+const Festival = () => (
+  <h1>Festival</h1>
+);
 
 export default Festival;
