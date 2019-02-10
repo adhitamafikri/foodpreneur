@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-import { Layout, Menu, Breadcrumb } from 'antd'
+import { Layout, Menu } from 'antd'
 import 'antd/dist/antd.css';
 
 import Navigation from './components/Navigation';
@@ -9,7 +9,6 @@ import Festival from './components/Page/Festival';
 import BigResto from './components/Page/BigResto';
 
 import './components/stylesheets/main.scss';
-import './components/stylesheets/header.scss';
 
 const {
   Header, Content

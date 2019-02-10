@@ -4,8 +4,7 @@ import {
   Col } from 'antd';
 
 import { Figure, Img } from '../../common';
-import { H2, Paragraph } from '../../typography'
-import { FullHeightContainer } from './style';
+import { H2, Paragraph } from '../../typography';
 
 import FoodpreneurCompetition from '../../../assets/Competition/foodpreneur-competition.png';
 
@@ -18,7 +17,7 @@ const styles = {
 const Competition = () => (
   <React.Fragment>
     <section className="CompetitionDescription">
-      <FullHeightContainer bgColor="#EEEEEE" type="flex" justify="space-between" align="center">
+      <div className="container container--desc full-height">
         <div className="ornament ornament--blue"></div>
         <Row style={styles}>
           <Col lg={{ span: 10, offset: 1 }} style={{ display: 'flex', justifyContent: 'center' }}>
@@ -37,11 +36,11 @@ const Competition = () => (
             </Paragraph>
           </Col>
         </Row>
-      </FullHeightContainer>
+      </div>
     </section>
 
     <section className="CompetitionAbout">
-      <FullHeightContainer bgColor="#7CB342" type="flex" justify="space-between" align="center">
+      <div className="container container--about full-height">
         <div className="ornament ornament--green"></div>
         <Row style={styles}>
           <Col lg={{ span: 10, offset: 1 }}>
@@ -60,11 +59,11 @@ const Competition = () => (
             </Paragraph>
           </Col>
         </Row>
-      </FullHeightContainer>
+      </div>
     </section>
 
     <section className="CompetitionRules">
-      <FullHeightContainer bgColor="#F9A050" type="flex" justify="space-between" align="center">
+      <div className="container container--rules full-height">
         <div className="ornament ornament--orange"></div>
         <Row style={styles}>
           <Col lg={{ span: 10, offset: 1 }}>
@@ -74,7 +73,7 @@ const Competition = () => (
           </Col>
           <Col lg={{ span: 10, offset: 1 }}>
             <H2 size="H2" color="white" bold>
-              About
+              Rules
             </H2>
             <Paragraph size="paragraph" color="white">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia in labore pariatur quaerat quod ullam,
@@ -83,11 +82,11 @@ const Competition = () => (
             </Paragraph>
           </Col>
         </Row>
-      </FullHeightContainer>
+      </div>
     </section>
 
     <section className="CompetitionSubmission">
-      <FullHeightContainer bgColor="#38BFC2" type="flex" justify="space-between" align="center">
+      <div className="container container--submission full-height">
         <div className="ornament ornament--black"></div>
         <Row style={styles}>
           <Col lg={{ span: 10, offset: 1 }}>
@@ -97,7 +96,7 @@ const Competition = () => (
           </Col>
           <Col lg={{ span: 10, offset: 1 }}>
             <H2 size="H2" color="white" bold>
-              About
+              Submission
             </H2>
             <Paragraph size="paragraph" color="white">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia in labore pariatur quaerat quod ullam,
@@ -106,7 +105,7 @@ const Competition = () => (
             </Paragraph>
           </Col>
         </Row>
-      </FullHeightContainer>
+      </div>
     </section>
   </React.Fragment>
 );

@@ -1,3 +1,19 @@
+@import '../variables';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &--desc { background-color: #EEEEEE; }
+  &--about { background-color: #7CB342; }
+  &--rules { background-color: #F9A050; }
+  &--submission { background-color: #38BFC2; }
+}
+
+.full-height {
+  height: calc(100vh - #{$header-height});
+}
+
 .ornament {
   position: absolute;
   top: 50%; left: 0;
