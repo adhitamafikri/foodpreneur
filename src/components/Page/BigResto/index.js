@@ -3,7 +3,9 @@ import '../../stylesheets/pages/bigresto.scss';
 
 
 const BigResto = () => (
-  <h1 className="testing">BigResto</h1>
+	<React.Fragment>
+		
+	</React.Fragment>
 );
 
 export default BigResto;
