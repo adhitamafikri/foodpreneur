@@ -10,16 +10,12 @@ import FoodpreneurCompetition from '../../../assets/Competition/foodpreneur-comp
 
 import '../../stylesheets/pages/competition.scss';  
 
-const styles = {
-  width: '100%'
-};
-
 const Competition = () => (
   <React.Fragment>
     <section className="CompetitionDescription">
       <div className="container container--desc full-height">
         <div className="ornament ornament--blue"></div>
-        <Row style={styles}>
+        <Row style={{ width: '100%' }}>
           <Col lg={{ span: 10, offset: 1 }} style={{ display: 'flex', justifyContent: 'center' }}>
             <Figure width={300} height={300}>
               <Img src={FoodpreneurCompetition} alt="Foodpreneur Competition"
@@ -42,7 +38,7 @@ const Competition = () => (
     <section className="CompetitionAbout">
       <div className="container container--about full-height">
         <div className="ornament ornament--green"></div>
-        <Row style={styles}>
+        <Row style={{ width: '100%' }}>
           <Col lg={{ span: 10, offset: 1 }}>
             <Figure>
               {/* <Img src={FoodpreneurAbout} alt="Foodpreneur About" /> */}
@@ -65,7 +61,7 @@ const Competition = () => (
     <section className="CompetitionRules">
       <div className="container container--rules full-height">
         <div className="ornament ornament--orange"></div>
-        <Row style={styles}>
+        <Row style={{ width: '100%' }}>
           <Col lg={{ span: 10, offset: 1 }}>
             <Figure>
               {/* <Img src={FoodpreneurAbout} alt="Foodpreneur About" /> */}
@@ -88,7 +84,7 @@ const Competition = () => (
     <section className="CompetitionSubmission">
       <div className="container container--submission full-height">
         <div className="ornament ornament--black"></div>
-        <Row style={styles}>
+        <Row style={{ width: '100%' }}>
           <Col lg={{ span: 10, offset: 1 }}>
             <Figure>
               {/* <Img src={FoodpreneurAbout} alt="Foodpreneur About" /> */}
