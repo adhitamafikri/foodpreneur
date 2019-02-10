@@ -8,8 +8,8 @@ import Competition from './components/Page/Competition';
 import Festival from './components/Page/Festival';
 import BigResto from './components/Page/BigResto';
 
-import HeaderStyles from './components/styles/HeaderStyles';
-import ContentStyles from './components/styles/ContentStyles';
+import './components/stylesheets/main.scss';
+import './components/stylesheets/header.scss';
 
 const {
   Header, Content
@@ -20,10 +20,10 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Layout className="App">
-          <Header style={HeaderStyles} >
+          <Header className="header" >
             <h1>Header</h1>
           </Header>
-          <Content style={ContentStyles}>
+          <Content className="main">
             <Navigation />
             <Route exact path="/" component={Festival} />
             <Route path="/competition" component={Competition} />
