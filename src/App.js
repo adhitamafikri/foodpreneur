@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import 'antd/dist/antd.css';
 
+import Header from './components/Header';
+import Main from './components/Main';
 import Navigation from './components/Navigation';
 import Competition from './components/Page/Competition';
 import Festival from './components/Page/Festival';
@@ -13,9 +15,12 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navigation />
-          <Route exact path="/" component={Festival} />
-          <Route path="/competition" component={Competition} />
-          <Route path="/big-resto" component={BigResto} />
+          <Header />
+          <Main>
+            <Route exact path="/" component={Festival} />
+            <Route path="/competition" component={Competition} />
+            <Route path="/big-resto" component={BigResto} />
+          </Main>
         </div>
       </BrowserRouter>
     );
