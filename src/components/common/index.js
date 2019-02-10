@@ -3,6 +3,14 @@ import styled from 'styled-components';
 
 export const Div = styled.div`
   background-color: ${props => props.bgColor || 'transparent'};
+  ${props => props.bgImage ?
+    ` background-image: url(${props.bgImg});
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    `
+    : ''
+  }
   ${props => props.type === 'flex' ? `
     display: flex;
     justify-content: ${props.justify};
@@ -13,6 +21,7 @@ export const Div = styled.div`
 `;
 Div.propTypes = {
   bgColor : PropTypes.string,
+  bgImg : PropTypes.string,
   type    : PropTypes.string,
   justify : PropTypes.string,
   align   : PropTypes.string,
