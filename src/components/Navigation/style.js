@@ -9,6 +9,6 @@ const StyledNavigation = styled.div`
   padding: 8px;
   box-shadow: -5px 5px 20px -2px rgba(0,0,0,0.3);
   z-index: 1080;
-`
+`;
 
 export default StyledNavigation;

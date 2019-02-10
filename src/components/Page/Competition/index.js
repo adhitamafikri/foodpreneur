@@ -1,10 +1,11 @@
 import React from 'react';
 import {
   Row,
-  Col,
-  Button } from 'antd';
+  Col } from 'antd';
 
-import { FullHeightContainer, OrnamentContainer } from './style'
+import { Figure, Img } from '../../common';
+import { FullHeightContainer, OrnamentContainer } from './style';
+import FoodpreneurCompetition from '../../../assets/Competition/foodpreneur-competition.png';
 
 const styles = {
   width: '100%'
@@ -17,8 +18,10 @@ const Competition = () => (
         <OrnamentContainer bgColor="#64FFDA" />
         <Row style={styles}>
           <Col lg={{ span: 10, offset: 1 }}>
-            Left Part
-            <Button type="primary">Button</Button>
+            <Figure width={250} height={250}>
+              <Img src={FoodpreneurCompetition} alt="Foodpreneur Competition"
+                  width={100} unit="%" />
+            </Figure>
           </Col>
           <Col lg={{ span: 10, offset: 1 }}>
             <p>
@@ -36,8 +39,6 @@ const Competition = () => (
         <OrnamentContainer bgColor="#33691E" />
         <Row style={styles}>
           <Col lg={{ span: 10, offset: 1 }}>
-            Left Part
-            <Button type="primary">Button</Button>
           </Col>
           <Col lg={{ span: 10, offset: 1 }}>
             <p>

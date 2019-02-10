@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Div from '../../Div';
+import { Div } from '../../common';
 
 export const FullHeightContainer = styled(Div)`
   height: 100vh;
