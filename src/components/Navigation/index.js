@@ -6,13 +6,13 @@ import StyledNavigation from './style';
 const Navigation = () => (
   <StyledNavigation>
     <NavLink to="/">
+      <p>Big Resto</p>
+    </NavLink>
+    <NavLink to="/festival">
       <p>Festival</p>
     </NavLink>
     <NavLink to="/competition">
       <p>Competition</p>
-    </NavLink>
-    <NavLink to="/big-resto">
-      <p>Big Resto</p>
     </NavLink>
   </StyledNavigation>
 );
