@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Layout className="App">
+        <Layout className="App" style={{background: '#fff'}}>
           <Header style={{ position: 'fixed', zIndex: 1, width: '100%', background: '#fff' }}>
             <div className="logo" />
             <Menu
@@ -28,22 +28,22 @@ class App extends Component {
               style={{ lineHeight: '64px' }}
             >
               <Menu.Item key="1">
-                <Link to="/">Festival</Link>
+                <Link to="/">Home</Link>
               </Menu.Item>
               <Menu.Item key="2">
                 <Link to="/competition">Competition</Link>
               </Menu.Item>
               <Menu.Item key="3">
-                <Link to="/big-resto">Big Resto</Link>
+                <Link to="/festival">Festival</Link>
               </Menu.Item>
             </Menu>
           </Header>
           
           <Content className="main">
             <Navigation />
-            <Route exact path="/" component={Festival} />
+            <Route exact path="/" component={BigResto} />
             <Route path="/competition" component={Competition} />
-            <Route path="/big-resto" component={BigResto} />
+            <Route path="/festival" component={Festival} />
           </Content>
         </Layout>
       </BrowserRouter>
