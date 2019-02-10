@@ -25,17 +25,17 @@ class App extends Component {
             <Menu
               theme="light"
               mode="horizontal"
-              defaultSelectedKeys={['2']}
+              defaultSelectedKeys={['1']}
               style={{ lineHeight: '64px' }}
             >
               <Menu.Item key="1">
-                <Link to="/competition"> Competition</Link>
+                <Link to="/"> Home</Link>
               </Menu.Item>
               <Menu.Item key="2">
-                <Link to="/big-resto"> Competition</Link>
+                <Link to="/competition"> Competition</Link>
               </Menu.Item>
               <Menu.Item key="3">
-                <Link to="/"> Festival</Link>
+                <Link to="/festival"> Festival</Link>
               </Menu.Item>
             </Menu>
           </Header>
