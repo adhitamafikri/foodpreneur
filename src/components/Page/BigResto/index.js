@@ -1,7 +1,9 @@
 import React from 'react';
+import '../../stylesheets/pages/bigresto.scss';
+
 
 const BigResto = () => (
-  <h1>BigResto</h1>
+  <h1 className="testing">BigResto</h1>
 );
 
 export default BigResto;
