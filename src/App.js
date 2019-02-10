@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Layout className="App">
-          <Header style={HeaderStyles, { position: 'fixed', zIndex: 1, width: '100%' }}>
+          <Header style={[HeaderStyles, { position: 'fixed', zIndex: 1, width: '100%' }]}>
             <div className="logo" />
             <Menu
               theme="light"
