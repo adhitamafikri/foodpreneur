@@ -9,7 +9,7 @@ import { FullHeightContainer } from './style';
 
 import FoodpreneurCompetition from '../../../assets/Competition/foodpreneur-competition.png';
 
-import './style.scss';  
+import '../../stylesheets/pages/competition.scss';  
 
 const styles = {
   width: '100%'
