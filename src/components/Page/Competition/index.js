@@ -1,19 +1,22 @@
 import React from 'react';
 import {
   Row,
-  Col } from 'antd';
+  Col,
+  Button } from 'antd';
 
 import { Figure, Img } from '../../common';
 import { H2, Paragraph } from '../../typography';
+import { FullHeightContainer } from './style';
 
 import FoodpreneurCompetition from '../../../assets/Competition/foodpreneur-competition.png';
+import FoodpreneurSubmission from '../../../assets/Competition/foodpreneur-submission.png';
 
 import '../../stylesheets/pages/competition.scss';  
 
 const Competition = () => (
   <React.Fragment>
     <section className="CompetitionDescription">
-      <div className="container container--desc full-height">
+      <FullHeightContainer className="container container--desc">
         <div className="ornament ornament--blue"></div>
         <Row style={{ width: '100%' }}>
           <Col lg={{ span: 10, offset: 1 }} style={{ display: 'flex', justifyContent: 'center' }}>
@@ -32,11 +35,11 @@ const Competition = () => (
             </Paragraph>
           </Col>
         </Row>
-      </div>
+      </FullHeightContainer>
     </section>
 
     <section className="CompetitionAbout">
-      <div className="container container--about full-height">
+      <FullHeightContainer className="container container--about">
         <div className="ornament ornament--green"></div>
         <Row style={{ width: '100%' }}>
           <Col lg={{ span: 10, offset: 1 }}>
@@ -55,19 +58,14 @@ const Competition = () => (
             </Paragraph>
           </Col>
         </Row>
-      </div>
+      </FullHeightContainer>
     </section>
 
     <section className="CompetitionRules">
-      <div className="container container--rules full-height">
+      <FullHeightContainer className="container container--rules">
         <div className="ornament ornament--orange"></div>
         <Row style={{ width: '100%' }}>
-          <Col lg={{ span: 10, offset: 1 }}>
-            <Figure>
-              {/* <Img src={FoodpreneurAbout} alt="Foodpreneur About" /> */}
-            </Figure>
-          </Col>
-          <Col lg={{ span: 10, offset: 1 }}>
+          <Col lg={{ span: 6, offset: 4 }}>
             <H2 size="H2" color="white" bold>
               Rules
             </H2>
@@ -77,20 +75,26 @@ const Competition = () => (
               delectus perferendis consequatur dolore assumenda.
             </Paragraph>
           </Col>
+          <Col lg={{ span: 10, offset: 1 }}>
+            <Figure>
+              {/* <Img src={}></Img> */}
+            </Figure>
+          </Col>
         </Row>
-      </div>
+      </FullHeightContainer>
     </section>
 
     <section className="CompetitionSubmission">
-      <div className="container container--submission full-height">
+      <FullHeightContainer className="container container--submission">
         <div className="ornament ornament--black"></div>
         <Row style={{ width: '100%' }}>
-          <Col lg={{ span: 10, offset: 1 }}>
-            <Figure>
-              {/* <Img src={FoodpreneurAbout} alt="Foodpreneur About" /> */}
+          <Col lg={{ span: 14, offset: 1 }}>
+            <Figure width={300} height={200}>
+              <Img src={FoodpreneurSubmission} alt="Foodpreneur Submission"
+                  width={100} unit="%" />
             </Figure>
           </Col>
-          <Col lg={{ span: 10, offset: 1 }}>
+          <Col lg={{ span: 5, offset: 1 }}>
             <H2 size="H2" color="white" bold>
               Submission
             </H2>
@@ -99,9 +103,10 @@ const Competition = () => (
               dicta iusto hic excepturi! Quaerat soluta praesentium ad ab inventore
               delectus perferendis consequatur dolore assumenda.
             </Paragraph>
+            <Button className="btn-submit">SUBMIT HERE</Button>
           </Col>
         </Row>
-      </div>
+      </FullHeightContainer>
     </section>
   </React.Fragment>
 );

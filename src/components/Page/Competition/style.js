@@ -3,6 +3,6 @@ import { Div } from '../../common';
 import { HEADER_HEIGHT } from '../../StyleVariables';
 
 export const FullHeightContainer = styled(Div)`
-  height: calc(100vh - ${HEADER_HEIGHT});
+  height: calc(${window.outerHeight - 75 + 'px'} - ${HEADER_HEIGHT});
   position: relative;
 `;
