@@ -6,6 +6,7 @@ const handleSizing = (size) => {
     case 'big': return '24px';
     case 'H2': return '36px';
     case 'H1': return '48px';
+    case 'title': return '60px';
     case 'paragraph': return '18px';
     default: return '14px';
   }

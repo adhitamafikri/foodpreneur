@@ -22,13 +22,13 @@
 
 	.ornament {
 	  position: absolute;
-	  top: 50%; left: 0;
+	  top: 30%; left: 0;
 	  transform: translate(0, -50%);
 	  width: 100%;
 	  background-repeat: no-repeat;
 	  &--red {
 	    background-color: #E3185D;
-	    clip-path: polygon(0 0,0 60%, 100% 78%, 100% 0);
+	    clip-path: polygon(0 0, 0 58%, 100% 88%, 100% 0);
 	  }
 	}
 }

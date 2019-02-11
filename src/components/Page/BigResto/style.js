@@ -7,6 +7,6 @@ export const FullHeightContainer = styled(Div)`
   position: relative;
 `;
 export const FullHeightOrnament = styled(Div)`
-  height: calc(${window.outerHeight + 200 + 'px'});
+  height: calc(${window.outerHeight - 200 + 'px'});
   position: relative;
 `;
