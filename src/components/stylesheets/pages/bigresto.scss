@@ -1,15 +1,13 @@
 @import '../_variables';
 .big-resto {
-	.container {
-	  display: flex;
-	  justify-content: space-between;
-	  clip-path: polygon(0 0, 0 65%, 100% 85%, 100% 0);
-	  &--header {
+	.container--header {
+	  	display: flex;
+		justify-content: space-between;
+		clip-path: polygon(0 0, 0 65%, 100% 85%, 100% 0);
 	  	background-image: url('../../../assets/BigResto/banner.png');
 	  	background-position: 0px -70px;
 	  	background-size: 100%;
 	  	background-repeat: no-repeat;
-	  }
 	  &::before {
 	  	  width:60%;
 	  	  background: rgba(255, 255, 255, 0.57);

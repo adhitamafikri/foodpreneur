@@ -4,6 +4,7 @@ import {
   Row,
   Col,
   Avatar } from 'antd';
+ import { Button } from 'reactstrap';
 
 import { Figure, Img } from '../../common';
 import { H2, Paragraph, Span } from '../../typography';
@@ -18,7 +19,7 @@ const BigResto = () => (
 		<div className="big-resto">
 			<section>
 			    <FullHeightOrnament className="ornament ornament--red"></FullHeightOrnament>
-			      <FullHeightContainer className="container container--header">
+			      <FullHeightContainer className="container--header">
 			        <Row style={{ paddingTop: '150px'}}>
 			          <Col lg={{ span: 10, offset: 2 }} sm={{ span: 10, offset: 2 }}>
 				          <Col lg={24} style={{ display: 'flex', justifyContent: 'center'}}>
@@ -40,105 +41,103 @@ const BigResto = () => (
 			        </Row>
 			      </FullHeightContainer>
 		    </section>
-		    <section className="">
-		    	<FullHeightContainer>
-			    	<Row>
-			    		<Col lg={{ span: 22, offset: 2 }}>
-				    		<H2 size="title" color="#E3185D" weight="bold">
-			               		Brand <Span color="#E3185D" weight="thin" size="title">Partner</Span>
-			             	</H2>
-			    		</Col>
-			    	</Row>
-			    	<Row>
-			    		<Col lg={{ span: 22, offset: 2 }}>
-			    			<Row>
-			    				<Col span={6}>
-			    					<Avatar src="brands/1-hb.png" shape="square" size={310} />
-			    				</Col>
-			    				<Col span={13}>
-			    					<Row>
-				    					<Col lg={6}>
-				    						<Avatar shape="square" size={150} icon="user" />
-				    					</Col>
-				    					<Col lg={6}>
-				    						<Avatar shape="square" size={150} icon="user" />
-				    					</Col>
-				    					<Col lg={6}>
-				    						<Avatar shape="square" size={150} icon="user" />
-				    					</Col>
-				    					<Col lg={6}>
-				    						<Avatar shape="square" size={150} icon="user" />
-				    					</Col>
-			    					</Row>
-			    					<Row style={{marginTop:'10px'}}>
-				    					<Col lg={6}>
-				    						<Avatar shape="square" size={150} icon="user" />
-				    					</Col>
-				    					<Col lg={6}>
-				    						<Avatar shape="square" size={150} icon="user" />
-				    					</Col>
-				    					<Col lg={6}>
-				    						<Avatar shape="square" size={150} icon="user" />
-				    					</Col>
-				    					<Col lg={6}>
-				    						<Avatar shape="square" size={150} icon="user" />
-				    					</Col>
-			    					</Row>
-			    				</Col>
-			    			</Row>
-			    		</Col>
-			    	</Row>
-			    	<Row style={{marginTop: '20px'}}>
-			    		<Col lg={{ span: 22, offset: 2 }}>
-			    			<Row>
-			    				<Col span={6} push={13}>
-			    					<Avatar src="brands/2-ufs.png" shape="square" size={310} />
-			    				</Col>
-			    				<Col span={13} pull={6}>
-			    					<Row>
-				    					<Col lg={6}>
-				    						<Avatar shape="square" size={150} icon="user" />
-				    					</Col>
-				    					<Col lg={6}>
-				    						<Avatar shape="square" size={150} icon="user" />
-				    					</Col>
-				    					<Col lg={6}>
-				    						<Avatar shape="square" size={150} icon="user" />
-				    					</Col>
-				    					<Col lg={6}>
-				    						<Avatar shape="square" size={150} icon="user" />
-				    					</Col>
-			    					</Row>
-			    					<Row style={{marginTop:'10px'}}>
-				    					<Col lg={6}>
-				    						<Avatar shape="square" size={150} icon="user" />
-				    					</Col>
-				    					<Col lg={6}>
-				    						<Avatar shape="square" size={150} icon="user" />
-				    					</Col>
-				    					<Col lg={6}>
-				    						<Avatar shape="square" size={150} icon="user" />
-				    					</Col>
-				    					<Col lg={6}>
-				    						<Avatar shape="square" size={150} icon="user" />
-				    					</Col>
-			    					</Row>
-			    				</Col>
-			    			</Row>
-			    		</Col>
-			    	</Row>
-			    	<Row style={{marginTop: '30px'}}>
-			    		<Col lg={{ span: 20, offset: 2 }} sm={{ span: 20, offset: 2 }}>
-					    	<Paragraph size="paragraph">
-				                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia in labore pariatur quaerat quod ullam,
-				                dicta iusto hic excepturi! Quaerat soluta praesentium ad ab inventore
-				                delectus perferendis consequatur dolore assumenda. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia in labore pariatur quaerat quod ullam,
-				                dicta iusto hic excepturi! Quaerat soluta praesentium ad ab inventore
-				                delectus perferendis consequatur dolore assumenda.
-				            </Paragraph>
-			    		</Col>
-			    	</Row>
-		    	</FullHeightContainer>
+		    <section className="container">
+				<Row>
+					<Col lg={{ span: 22, offset: 2 }}>
+						<H2 size="title" color="#E3185D" weight="bold">
+				       		Brand <Span color="#E3185D" weight="thin" size="title">Partner</Span>
+				     	</H2>
+					</Col>
+				</Row>
+				<Row>
+					<Col lg={{ span: 20, offset: 4 }}>
+						<Row>
+							<Col span={7}>
+								<Avatar src="brands/1-hb.png" shape="square" size={310} />
+							</Col>
+							<Col span={13}>
+								<Row>
+									<Col lg={6}>
+										<Avatar shape="square" size={150} icon="user" />
+									</Col>
+									<Col lg={6}>
+										<Avatar shape="square" size={150} icon="user" />
+									</Col>
+									<Col lg={6}>
+										<Avatar shape="square" size={150} icon="user" />
+									</Col>
+									<Col lg={6}>
+										<Avatar shape="square" size={150} icon="user" />
+									</Col>
+								</Row>
+								<Row style={{marginTop:'10px'}}>
+									<Col lg={6}>
+										<Avatar shape="square" size={150} icon="user" />
+									</Col>
+									<Col lg={6}>
+										<Avatar shape="square" size={150} icon="user" />
+									</Col>
+									<Col lg={6}>
+										<Avatar shape="square" size={150} icon="user" />
+									</Col>
+									<Col lg={6}>
+										<Avatar shape="square" size={150} icon="user" />
+									</Col>
+								</Row>
+							</Col>
+						</Row>
+					</Col>
+				</Row>
+				<Row style={{marginTop: '20px'}}>
+					<Col lg={{ span: 20, offset: 4 }}>
+						<Row>
+							<Col span={6} push={14}>
+								<Avatar src="brands/2-ufs.png" shape="square" size={310} style={{marginLeft:'-17px'}} />
+							</Col>
+							<Col span={13} pull={6}>
+								<Row>
+									<Col lg={6} md={5}>
+										<Avatar shape="square" size={150} icon="user" />
+									</Col>
+									<Col lg={6} md={5}>
+										<Avatar shape="square" size={150} icon="user" />
+									</Col>
+									<Col lg={6} md={5}>
+										<Avatar shape="square" size={150} icon="user" />
+									</Col>
+									<Col lg={6} md={5}>
+										<Avatar shape="square" size={150} icon="user" />
+									</Col>
+								</Row>
+								<Row style={{marginTop:'10px'}}>
+									<Col lg={6}>
+										<Avatar shape="square" size={150} icon="user" />
+									</Col>
+									<Col lg={6}>
+										<Avatar shape="square" size={150} icon="user" />
+									</Col>
+									<Col lg={6}>
+										<Avatar shape="square" size={150} icon="user" />
+									</Col>
+									<Col lg={6}>
+										<Avatar shape="square" size={150} icon="user" />
+									</Col>
+								</Row>
+							</Col>
+						</Row>
+					</Col>
+				</Row>
+				<Row style={{marginTop: '30px'}}>
+					<Col lg={{ span: 20, offset: 2 }} sm={{ span: 20, offset: 2 }}>
+				    	<Paragraph size="paragraph">
+				            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia in labore pariatur quaerat quod ullam,
+				            dicta iusto hic excepturi! Quaerat soluta praesentium ad ab inventore
+				            delectus perferendis consequatur dolore assumenda. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia in labore pariatur quaerat quod ullam,
+				            dicta iusto hic excepturi! Quaerat soluta praesentium ad ab inventore
+				            delectus perferendis consequatur dolore assumenda.
+				        </Paragraph>
+					</Col>
+				</Row>
 		    </section>
 		    <section>
 		    </section>
