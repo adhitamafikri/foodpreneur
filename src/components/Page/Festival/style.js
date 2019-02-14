@@ -1,11 +1,46 @@
 import Styled from 'styled-components'
 import {rgba} from 'polished'
 
-import ImgHero from '../../../assets/Festival/banner.png'
+import {ImgHero} from './images'
 
 const StyledFestival = Styled.main`
     overflow: hidden;
     font-size: 19px;
+
+    .with-space {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .title {
+        padding-bottom: 50px;
+        font-size: 27px;
+        color: #58595b;
+    }
+
+    .title-line {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            border-bottom: 4px solid #929497;
+            z-index: 1;
+        }
+
+        
+        .text {
+            background: white;
+            padding-left: 20px;
+            padding-right: 20px;
+            z-index: 2;
+        }
+    }
 
     .hero {
         background: linear-gradient( ${rgba('white', .8)}, ${rgba('white', .8)}), url(${ImgHero}) center center no-repeat;
@@ -46,33 +81,43 @@ const StyledFestival = Styled.main`
         }
     }
 
-    .foods {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    
-        .foods-content-container {
-            position: relative;
+    .foods .foods-content-container {
+        position: relative;
 
-            .img-fluid {
-                max-width: 500px;
-                margin-top: -100px;
-            }
+        .img-fluid {
+            max-width: 500px;
+            margin-top: -100px;
+        }
+        
+        .foods-decoration-top,
+        .foods-decoration-bottom {
+            position: absolute;
+        }
+
+        .foods-decoration-top {
+            top: -100px;
+            right: -230px;
+            max-width: 400px;
+        }
+
+        .foods-decoration-bottom {
+            bottom: 50px;
+            left: 0;
+            max-width: 700px;
+        }
+    }
+
+    .support .row {
+        .img-fluid {
+            padding: 10px 20px;
+        }
+
+        &:first-of-type {
+            padding-bottom: 70px;
             
-            .foods-decoration-top,
-            .foods-decoration-bottom {
-                position: absolute;
-            }
-
-            .foods-decoration-top {
-                top: -100px;
-                right: -230px;
-                max-width: 400px;
-            }
-
-            .foods-decoration-bottom {
-                bottom: 50px;
-                left: 0;
-                max-width: 700px;
+            .img-fluid {
+                max-width: 225px;
+                padding: 0
             }
         }
     }

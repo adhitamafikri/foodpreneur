@@ -5,12 +5,31 @@ import {
     Col
 } from 'reactstrap'
 
+import {
+    ImgLogo,
+    ImgFoods,
+    ImgFoodsDecorationTop,
+    ImgFoodsDecorationBottom,
+    ImgUnileverFoodSolutions,
+    ImgHeavenlyBlush,
+    ImgOtsuka,
+    ImgIdmarco,
+    ImgStarbuck,
+    ImgCocaCola,
+    ImgWalls,
+    ImgNestle,
+    ImgCimory,
+    ImgJollyTime,
+    ImgNutragen,
+    ImgOtStore,
+    ImgIndomilk,
+    ImgBendNJerrys,
+    ImgKellogs,
+    ImgBogasari,
+    ImgNissin,
+    ImgUltraJaya
+} from './images'
 import StyledFestival from './style'
-
-import ImgLogo from '../../../assets/Festival/logo.png'
-import ImgFoods from '../../../assets/Festival/foods.png'
-import ImgFoodsDecorationTop from '../../../assets/Festival/cloud-grey.png'
-import ImgFoodsDecorationBottom from '../../../assets/Festival/catoon.png'
 
 const Festival = () => (
     <React.Fragment>
@@ -32,7 +51,7 @@ const Festival = () => (
                     </div>
                 </div>
             </section>
-            <section className="foods">
+            <section className="foods with-space">
                 <div className="foods-content-container">
                     <Container>
                         <Row>
@@ -47,6 +66,76 @@ const Festival = () => (
                     <img className="img-fluid foods-decoration-top" src={ImgFoodsDecorationTop} alt="Decoration" />
                     <img className="img-fluid foods-decoration-bottom" src={ImgFoodsDecorationBottom} alt="Decoration " />
                 </div>
+            </section>
+            <section className="support with-space">
+                <Container>
+                    <h2 className="text-uppercase  text-center title title-line">
+                        <span className="text">supported by</span>
+                    </h2>
+
+                    <Row className="align-items-center justify-content-center">
+                        <Col md="4">
+                            <img className="img-fluid mx-auto d-block" src={ImgUnileverFoodSolutions} alt="Unilever Food Solutions" />
+                        </Col>
+                        <Col md="4">
+                            <img className="img-fluid mx-auto d-block" src={ImgHeavenlyBlush} alt="Heavenly Blush" />
+                        </Col>
+                    </Row>
+                    <Row className="align-items-center justify-content-center">
+                        <Col md="2">
+                            <img className="img-fluid mx-auto d-block" src={ImgOtsuka} alt="Otsuka" />
+                        </Col>
+                        <Col md="2">
+                            <img className="img-fluid mx-auto d-block" src={ImgIdmarco} alt="Idmarco" />
+                        </Col>
+                        <Col md="2">
+                            <img className="img-fluid mx-auto d-block" src={ImgStarbuck} alt="Starbuck" />
+                        </Col>
+                        <Col md="2">
+                            <img className="img-fluid mx-auto d-block" src={ImgCocaCola} alt="Coca Cola" />
+                        </Col>
+                        <Col md="2">
+                            <img className="img-fluid mx-auto d-block" src={ImgWalls} alt="Wall's" />
+                        </Col>
+                    </Row>
+                    <Row className="align-items-center justify-content-center">
+                        <Col md="2">
+                            <img className="img-fluid mx-auto d-block" src={ImgNestle} alt="Nestle" />
+                        </Col>
+                        <Col md="2">
+                            <img className="img-fluid mx-auto d-block" src={ImgCimory} alt="Cimory" />
+                        </Col>
+                        <Col md="2">
+                            <img className="img-fluid mx-auto d-block" src={ImgJollyTime} alt="Jelly Time" />
+                        </Col>
+                        <Col md="2">
+                            <img className="img-fluid mx-auto d-block" src={ImgNutragen} alt="Nutragen" />
+                        </Col>
+                        <Col md="2">
+                            <img className="img-fluid mx-auto d-block" src={ImgOtStore} alt="OT Store" />
+                        </Col>
+                        <Col md="2">
+                            <img className="img-fluid mx-auto d-block" src={ImgIndomilk} alt="Indomilk" />
+                        </Col>
+                    </Row>
+                    <Row className="align-items-center justify-content-center">
+                        <Col md="2">
+                            <img className="img-fluid mx-auto d-block" src={ImgBendNJerrys} alt="Ben & Jerry's" />
+                        </Col>
+                        <Col md="2">
+                            <img className="img-fluid mx-auto d-block" src={ImgKellogs} alt="Kellogg's" />
+                        </Col>
+                        <Col md="2">
+                            <img className="img-fluid mx-auto d-block" src={ImgBogasari} alt="Bogasari" />
+                        </Col>
+                        <Col md="2">
+                            <img className="img-fluid mx-auto d-block" src={ImgNissin} alt="Nissin" />
+                        </Col>
+                        <Col md="2">
+                            <img className="img-fluid mx-auto d-block" src={ImgUltraJaya} alt="Ultra Jaya" />
+                        </Col>
+                    </Row>
+                </Container>
             </section>
         </StyledFestival>
     </React.Fragment>
