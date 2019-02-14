@@ -21,6 +21,15 @@ import ImgKellogs from '../../../assets/Festival/kg.png'
 import ImgBogasari from '../../../assets/Festival/bs.png'
 import ImgNissin from '../../../assets/Festival/ns.png'
 import ImgUltraJaya from '../../../assets/Festival/uj.png'
+import ImgWorkshopKulinaria from '../../../assets/Festival/img1.png'
+import ImgTalkshowNSharing from '../../../assets/Festival/img2.png'
+import ImgFinalistShowcase from '../../../assets/Festival/img3.png'
+import ImgFoodpreneur from '../../../assets/Festival/img4.png'
+import ImgHypeCorner from '../../../assets/Festival/img5.png'
+import ImgPopUpMarket from '../../../assets/Festival/img6.png'
+import ImgSpiceORamaStage from '../../../assets/Festival/img7.png'
+import ImgCelebrityChef from '../../../assets/Festival/img8.png'
+import ImgChallengeCorner from '../../../assets/Festival/img9.png'
 
 export {
     ImgHero,
@@ -45,5 +54,14 @@ export {
     ImgKellogs,
     ImgBogasari,
     ImgNissin,
-    ImgUltraJaya
+    ImgUltraJaya,
+    ImgWorkshopKulinaria,
+    ImgTalkshowNSharing,
+    ImgFinalistShowcase,
+    ImgFoodpreneur,
+    ImgHypeCorner,
+    ImgPopUpMarket,
+    ImgSpiceORamaStage,
+    ImgCelebrityChef,
+    ImgChallengeCorner
 }
