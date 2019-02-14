@@ -11,7 +11,7 @@ import { H2, Paragraph, Span } from '../../typography';
 import { FullHeightContainer, FullHeightOrnament } from './style';
 
 import Logo from '../../../assets/logo.png';
-import Brand from '../../../assets/brands/1-hb.png';
+// import Brand from '../../../assets/brands/1-hb.png';
 
 
 const BigResto = () => (
