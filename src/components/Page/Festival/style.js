@@ -1,9 +1,14 @@
 import Styled from 'styled-components'
-import {rgba} from 'polished'
+import {
+    rgba,
+} from 'polished'
 
 import {ImgHero} from './images'
+import Font1 from '../../../assets/Fonts/GothamPro/GothamPro.ttf'
 
 const StyledFestival = Styled.main`
+    @import url('https://fonts.googleapis.com/css?family=Lato');
+
     overflow: hidden;
     font-size: 19px;
 
@@ -19,7 +24,7 @@ const StyledFestival = Styled.main`
     }
 
     .title-lg {
-        font-size: 57px;
+        font-size: 56px;
     }
 
     .title-line {
@@ -47,11 +52,16 @@ const StyledFestival = Styled.main`
     }
 
     .descriptions {
-        font-size: 30px;
+        font-size: 29px;
     }
 
     [class$="content-container"] > .img-fluid {
         position: absolute;
+    }
+
+    .hero,
+    .foods {
+        font-family: 'Gotham Pro';
     }
 
     .hero {
@@ -84,7 +94,6 @@ const StyledFestival = Styled.main`
             width: 100%;
             left: 0;
             color: white;
-            text-align: justify;
 
             .img-fluid {
                 max-width: 500px;
@@ -136,8 +145,15 @@ const StyledFestival = Styled.main`
     .edutainment,
     .festival,
     .entertainment {
-        .container .img-fluid {
-            height: 325px;
+        .container {
+            .img-fluid {
+                height: 325px;
+            }
+
+            .title,
+            .descriptions {
+                font-family: 'KG Inimitable Original';
+            }
         }
     }
 
@@ -218,7 +234,7 @@ const StyledFestival = Styled.main`
             &:nth-of-type(2) {
                 top: -92px;
                 right: 9%;
-                max-width: 150px;
+                max-width: 160px;
             }
 
             &:last-of-type {

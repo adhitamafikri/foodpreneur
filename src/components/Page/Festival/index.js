@@ -281,7 +281,7 @@ class Festival extends Component {
                                         <Col md="6">
                                             <img className="img-fluid mx-auto d-block" src={ImgLogo} alt="Festival" />
                                         </Col>
-                                        <Col md="6">
+                                        <Col md="6" className="text-justify">
                                             Dolor eu cupidatat dolore aliquip occaecat magna id cupidatat. Nostrud minim enim excepteur Lorem nisi voluptate. Sit aute ex commodo cupidatat ullamco. Consequat dolor eu Lorem laboris eu. Nostrud aute labore amet excepteur consectetur ipsum ipsum esse officia occaecat est laborum incididunt. Id mollit in consectetur quis cillum culpa aliquip aliqua. Anim ut excepteur labore proident laboris.
                                         </Col>
                                     </Row>
@@ -293,7 +293,7 @@ class Festival extends Component {
                         <div className="foods-content-container">
                             <Container>
                                 <Row>
-                                    <Col md="6">
+                                    <Col md="6" className="text-justify">
                                         Irure qui eiusmod veniam qui anim consequat enim. Velit aliqua tempor veniam ullamco irure laboris officia ea. Qui ex dolor ipsum veniam occaecat anim elit. Laborum aliqua reprehenderit elit duis ut veniam consectetur sint ut. Deserunt amet exercitation amet enim ex aute ipsum. Elit magna sunt amet amet irure do qui. Occaecat consectetur fugiat pariatur laboris enim.
                                     </Col>
                                     <Col>
@@ -359,7 +359,7 @@ class Festival extends Component {
                             <img className="img-fluid" src={ImgDecorationCloudRight} alt="Decoration" />
                         </div>
                     </section>
-                    <section className="with-space">
+                    <section className="with-space pb-0">
                         <img className="img-fluid" src={ImgFooter} alt="Decoration" />
                     </section>
                 </StyledFestival>
