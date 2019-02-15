@@ -8,7 +8,6 @@ import {
 import {
     ImgLogo,
     ImgFoods,
-    ImgFoodsDecorationTop,
     ImgFoodsDecorationBottom,
     ImgUnileverFoodSolutions,
     ImgHeavenlyBlush,
@@ -31,12 +30,18 @@ import {
     ImgWorkshopKulinaria,
     ImgTalkshowNSharing,
     ImgFinalistShowcase,
+    ImgEdutainmentDecorationTop,
     ImgFoodpreneur,
     ImgHypeCorner,
     ImgPopUpMarket,
+    ImgFestivalDecorationTopLeft,
     ImgSpiceORamaStage,
     ImgCelebrityChef,
-    ImgChallengeCorner
+    ImgChallengeCorner,
+    ImgEntertainmentDecorationTop,
+    ImgDecorationCloud,
+    ImgDecorationCloudLeft,
+    ImgDecorationCloudRight,
 } from './images'
 import StyledFestival from './style'
 
@@ -227,8 +232,8 @@ class Festival extends Component {
                                     </Col>
                                 </Row>
                             </Container>
-                            <img className="img-fluid foods-decoration-top" src={ImgFoodsDecorationTop} alt="Decoration" />
-                            <img className="img-fluid foods-decoration-bottom" src={ImgFoodsDecorationBottom} alt="Decoration " />
+                            <img className="img-fluid" src={ImgDecorationCloud} alt="Decoration" />
+                            <img className="img-fluid" src={ImgFoodsDecorationBottom} alt="Decoration " />
                         </div>
                     </section>
                     <section className="support with-space">
@@ -265,16 +270,16 @@ class Festival extends Component {
                     <section className="edutainment with-space">
                         <div className="edutainment-content-container">
                             <Container>
-                                <h2 className="text-uppercase text-center">
+                                <h2 className="text-uppercase text-center title title-lg">
                                     {this.state.edutainment.title}
                                 </h2>
                                 <Row>
                                     {this.state.edutainment.items.map((item) => (
                                         <Col md="4" key={item.title}>
-                                            <figure>
+                                            <figure className="mb-0">
                                                 <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
 
-                                                <figcaption className="text-center">
+                                                <figcaption className="text-uppercase text-center descriptions with-space pb-0">
                                                     {item.title}
                                                 </figcaption>
                                             </figure>
@@ -282,21 +287,24 @@ class Festival extends Component {
                                     ))}
                                 </Row>
                             </Container>
+                            <img class="img-fluid" src={ImgDecorationCloudRight} alt="Decoration" />
+                            <img class="img-fluid" src={ImgEdutainmentDecorationTop} alt="Decoration" />
+                            <img class="img-fluid" src={ImgDecorationCloudLeft} alt="Decoration" />
                         </div>
                     </section>
                     <section className="festival with-space">
                         <div className="festival-content-container">
                             <Container>
-                                <h2 className="text-uppercase text-center">
+                                <h2 className="text-uppercase text-center title title-lg">
                                     {this.state.festival.title}
                                 </h2>
                                 <Row>
                                     {this.state.festival.items.map((item) => (
                                         <Col md="4" key={item.title}>
-                                            <figure>
+                                            <figure className="mb-0">
                                                 <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
 
-                                                <figcaption className="text-center">
+                                                <figcaption className="text-uppercase text-center descriptions with-space pb-0">
                                                     {item.title}
                                                 </figcaption>
                                             </figure>
@@ -304,21 +312,24 @@ class Festival extends Component {
                                     ))}
                                 </Row>
                             </Container>
+                            <img class="img-fluid" src={ImgFestivalDecorationTopLeft} alt="Decoration" />
+                            <img class="img-fluid" src={ImgDecorationCloud} alt="Decoration" />
+                            <img class="img-fluid" src={ImgDecorationCloud} alt="Decoration" />
                         </div>
                     </section>
                     <section className="entertainment with-space">
                         <div className="entertainment-content-container">
                             <Container>
-                                <h2 className="text-uppercase text-center">
+                                <h2 className="text-uppercase text-center title title-lg">
                                     {this.state.entertainment.title}
                                 </h2>
                                 <Row>
                                     {this.state.entertainment.items.map((item) => (
                                         <Col md="4" key={item.title}>
-                                            <figure>
+                                            <figure className="mb-0">
                                                 <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
 
-                                                <figcaption className="text-center">
+                                                <figcaption className="text-uppercase text-center descriptions with-space pb-0">
                                                     {item.title}
                                                 </figcaption>
                                             </figure>
@@ -326,6 +337,9 @@ class Festival extends Component {
                                     ))}
                                 </Row>
                             </Container>
+                            <img class="img-fluid" src={ImgDecorationCloudLeft} alt="Decoration" />
+                            <img class="img-fluid" src={ImgEntertainmentDecorationTop} alt="Decoration" />
+                            <img class="img-fluid" src={ImgDecorationCloudRight} alt="Decoration" />
                         </div>
                     </section>
                 </StyledFestival>

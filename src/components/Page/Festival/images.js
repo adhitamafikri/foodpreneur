@@ -1,7 +1,6 @@
 import ImgHero from '../../../assets/Festival/banner.png'
 import ImgLogo from '../../../assets/Festival/logo.png'
 import ImgFoods from '../../../assets/Festival/foods.png'
-import ImgFoodsDecorationTop from '../../../assets/Festival/cloud-grey.png'
 import ImgFoodsDecorationBottom from '../../../assets/Festival/catoon.png'
 import ImgUnileverFoodSolutions from '../../../assets/Festival/ufs.png'
 import ImgHeavenlyBlush from '../../../assets/Festival/hb.png'
@@ -24,18 +23,23 @@ import ImgUltraJaya from '../../../assets/Festival/uj.png'
 import ImgWorkshopKulinaria from '../../../assets/Festival/img1.png'
 import ImgTalkshowNSharing from '../../../assets/Festival/img2.png'
 import ImgFinalistShowcase from '../../../assets/Festival/img3.png'
+import ImgEdutainmentDecorationTop from '../../../assets/Festival/bicycle.png'
 import ImgFoodpreneur from '../../../assets/Festival/img4.png'
 import ImgHypeCorner from '../../../assets/Festival/img5.png'
 import ImgPopUpMarket from '../../../assets/Festival/img6.png'
-import ImgSpiceORamaStage from '../../../assets/Festival/img7.png'
+import ImgFestivalDecorationTopLeft from '../../../assets/Festival/human.png'
+import ImgSpiceORamaStage from '../../../assets/Festival/img9.png'
 import ImgCelebrityChef from '../../../assets/Festival/img8.png'
-import ImgChallengeCorner from '../../../assets/Festival/img9.png'
+import ImgChallengeCorner from '../../../assets/Festival/img7.png'
+import ImgEntertainmentDecorationTop from '../../../assets/Festival/cartoon2.png'
+import ImgDecorationCloud from '../../../assets/Festival/cloud-grey.png'
+import ImgDecorationCloudLeft from '../../../assets/Festival/cloud-left.png'
+import ImgDecorationCloudRight from '../../../assets/Festival/cloud-right.png'
 
 export {
     ImgHero,
     ImgLogo,
     ImgFoods,
-    ImgFoodsDecorationTop,
     ImgFoodsDecorationBottom,
     ImgUnileverFoodSolutions,
     ImgHeavenlyBlush,
@@ -58,10 +62,16 @@ export {
     ImgWorkshopKulinaria,
     ImgTalkshowNSharing,
     ImgFinalistShowcase,
+    ImgEdutainmentDecorationTop,
     ImgFoodpreneur,
     ImgHypeCorner,
     ImgPopUpMarket,
+    ImgFestivalDecorationTopLeft,
     ImgSpiceORamaStage,
     ImgCelebrityChef,
-    ImgChallengeCorner
+    ImgChallengeCorner,
+    ImgEntertainmentDecorationTop,
+    ImgDecorationCloud,
+    ImgDecorationCloudLeft,
+    ImgDecorationCloudRight,
 }

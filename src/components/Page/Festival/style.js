@@ -8,14 +8,18 @@ const StyledFestival = Styled.main`
     font-size: 19px;
 
     .with-space {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     .title {
-        padding-bottom: 50px;
+        margin-bottom: 60px;
         font-size: 27px;
         color: #58595b;
+    }
+
+    .title-lg {
+        font-size: 57px;
     }
 
     .title-line {
@@ -42,6 +46,14 @@ const StyledFestival = Styled.main`
         }
     }
 
+    .descriptions {
+        font-size: 30px;
+    }
+
+    [class$="content-container"] > .img-fluid {
+        position: absolute;
+    }
+
     .hero {
         background: linear-gradient( ${rgba('white', .8)}, ${rgba('white', .8)}), url(${ImgHero}) center center no-repeat;
         background-size: cover;
@@ -50,7 +62,6 @@ const StyledFestival = Styled.main`
         clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
         .hero-content-container {
-            position: relative;
             display: flex;
             align-items: center;
             height: 600px;
@@ -81,29 +92,24 @@ const StyledFestival = Styled.main`
         }
     }
 
-    .foods .foods-content-container {
-        position: relative;
+    .foods .foods-content-container {        
+        > .img-fluid {
+            &:first-of-type {
+                top: -215px;
+                right: -230px;
+                max-width: 380px;
+            }
 
-        .img-fluid {
+            &:last-of-type {
+                bottom: 50px;
+                left: 0;
+                max-width: 700px;
+            }
+        }
+
+        .container .img-fluid {
             max-width: 500px;
-            margin-top: -100px;
-        }
-        
-        .foods-decoration-top,
-        .foods-decoration-bottom {
-            position: absolute;
-        }
-
-        .foods-decoration-top {
-            top: -100px;
-            right: -230px;
-            max-width: 400px;
-        }
-
-        .foods-decoration-bottom {
-            bottom: 50px;
-            left: 0;
-            max-width: 700px;
+            margin-top: -110px;
         }
     }
 
@@ -118,6 +124,126 @@ const StyledFestival = Styled.main`
             .img-fluid {
                 max-width: 225px;
                 padding: 0
+            }
+        }
+    }
+
+    .edutainment,
+    .entertainment {
+        background-color: #ffe7d7;
+    }
+
+    .edutainment,
+    .festival,
+    .entertainment {
+        .container .img-fluid {
+            height: 325px;
+        }
+    }
+
+    .edutainment {
+        margin-top: 100px;
+
+        .edutainment-content-container {
+            > .img-fluid {
+                &:first-of-type {
+                    top: -115px;
+                    right: 0;
+                    max-width: 130px;
+                }
+
+                &:nth-of-type(2) {
+                    top: -30px;
+                    right: 20%;
+                    max-width: 100px;
+                }
+
+                &:last-of-type {
+                    bottom: 0;
+                    left: 0;
+                    max-width: 120px;
+                }
+            }
+
+            .title,
+            .descriptions {
+                color: #e3185d;
+            }
+        }   
+    }
+
+    .festival .festival-content-container {
+        > .img-fluid {
+            &:first-of-type {
+                top: 0;
+                left: 0;
+                max-width: 140px;
+            }
+
+            &:nth-of-type(2) {
+                top: 180px;
+                left: -60px;
+                max-width: 260px;
+                z-index: 1;
+            }
+
+            &:last-of-type {
+                top: 0;
+                right: -50px;
+                max-width: 260px;
+            }
+        }
+
+        .container {
+            .img-fluid {
+                position: relative;
+                z-index: 2;
+            }
+
+            .title,
+            .descriptions {
+                color: #9559a4;
+            }
+        }
+    }
+
+    .entertainment .entertainment-content-container {
+        > .img-fluid {
+            &:first-of-type {
+                top: 0;
+                left: 0;
+                max-width: 130px;
+            }
+
+            &:nth-of-type(2) {
+                top: -92px;
+                right: 9%;
+                max-width: 150px;
+            }
+
+            &:last-of-type {
+                bottom: 60px;
+                right: 0;
+                max-width: 140px;
+            }
+        }
+
+        .title,
+        .descriptions {
+            color: #268779;
+        }
+    }
+
+    .vector {
+        width: 100%;
+        height: 300px;
+
+        .img-fluid {
+            max-width: 150px;
+
+            &:first-of-type {
+                bottom: 0;
+                max-width: 260px;
             }
         }
     }
