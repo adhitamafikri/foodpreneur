@@ -35,6 +35,7 @@ import ImgEntertainmentDecorationTop from '../../../assets/Festival/cartoon2.png
 import ImgDecorationCloud from '../../../assets/Festival/cloud-grey.png'
 import ImgDecorationCloudLeft from '../../../assets/Festival/cloud-left.png'
 import ImgDecorationCloudRight from '../../../assets/Festival/cloud-right.png'
+import ImgFooter from '../../../assets/Festival/footer.png'
 
 export {
     ImgHero,
@@ -74,4 +75,5 @@ export {
     ImgDecorationCloud,
     ImgDecorationCloudLeft,
     ImgDecorationCloudRight,
+    ImgFooter
 }

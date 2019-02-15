@@ -42,6 +42,7 @@ import {
     ImgDecorationCloud,
     ImgDecorationCloudLeft,
     ImgDecorationCloudRight,
+    ImgFooter
 } from './images'
 import StyledFestival from './style'
 
@@ -199,6 +200,74 @@ class Festival extends Component {
         }
     }
 
+    renderSupport = (data) => {
+        return data.rows.map((row, index) => {
+            let column;
+
+            if (index === 0) {
+                column = row.items.map((item) => (
+                    <Col md="4" key={item.title}>
+                        <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
+                    </Col>
+                ))
+            } else {
+                column = row.items.map((item) => (
+                    <Col md="2" key={item.title}>
+                        <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
+                    </Col>
+                ))
+            }
+
+            return (
+                <Row className="align-items-center justify-content-center" key={row.title}>
+                    {column}
+                </Row>
+            )
+        })
+    }
+
+    renderEdutainment = (data) => {
+        return data.items.map((item) => (
+            <Col md="4" key={item.title}>
+                <figure className="mb-0">
+                    <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
+
+                    <figcaption className="text-uppercase text-center descriptions with-space pb-0">
+                        {item.title}
+                    </figcaption>
+                </figure>
+            </Col>
+        ))
+    }
+
+    renderFestival = (data) => {
+        return data.items.map((item) => (
+            <Col md="4" key={item.title}>
+                <figure className="mb-0">
+                    <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
+
+                    <figcaption className="text-uppercase text-center descriptions with-space pb-0">
+                        {item.title}
+                    </figcaption>
+                </figure>
+            </Col>
+        ))
+    }
+
+    renderEntertainment = (data) => {
+        return data.items.map((item) => (
+            <Col md="4" key={item.title}>
+                <figure className="mb-0">
+                    <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
+
+                    <figcaption className="text-uppercase text-center descriptions with-space pb-0">
+                        {item.title}
+                    </figcaption>
+                </figure>
+            </Col>
+        ))
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -242,29 +311,7 @@ class Festival extends Component {
                                 <span className="text">{this.state.support.title}</span>
                             </h2>
 
-                            {this.state.support.rows.map((row, index) => {
-                                let column;
-
-                                if (index === 0) {
-                                    column = row.items.map((item) => (
-                                        <Col md="4" key={item.title}>
-                                            <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
-                                        </Col>
-                                    ))
-                                } else {
-                                    column = row.items.map((item) => (
-                                        <Col md="2" key={item.title}>
-                                            <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
-                                        </Col>
-                                    ))
-                                }
-
-                                return (
-                                    <Row className="align-items-center justify-content-center" key={row.title}>
-                                        {column}
-                                    </Row>
-                                )
-                            })}
+                            {this.renderSupport(this.state.support)}
                         </Container>
                     </section>
                     <section className="edutainment with-space">
@@ -274,22 +321,12 @@ class Festival extends Component {
                                     {this.state.edutainment.title}
                                 </h2>
                                 <Row>
-                                    {this.state.edutainment.items.map((item) => (
-                                        <Col md="4" key={item.title}>
-                                            <figure className="mb-0">
-                                                <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
-
-                                                <figcaption className="text-uppercase text-center descriptions with-space pb-0">
-                                                    {item.title}
-                                                </figcaption>
-                                            </figure>
-                                        </Col>
-                                    ))}
+                                    {this.renderEdutainment(this.state.edutainment)}
                                 </Row>
                             </Container>
-                            <img class="img-fluid" src={ImgDecorationCloudRight} alt="Decoration" />
-                            <img class="img-fluid" src={ImgEdutainmentDecorationTop} alt="Decoration" />
-                            <img class="img-fluid" src={ImgDecorationCloudLeft} alt="Decoration" />
+                            <img className="img-fluid" src={ImgDecorationCloudRight} alt="Decoration" />
+                            <img className="img-fluid" src={ImgEdutainmentDecorationTop} alt="Decoration" />
+                            <img className="img-fluid" src={ImgDecorationCloudLeft} alt="Decoration" />
                         </div>
                     </section>
                     <section className="festival with-space">
@@ -299,22 +336,12 @@ class Festival extends Component {
                                     {this.state.festival.title}
                                 </h2>
                                 <Row>
-                                    {this.state.festival.items.map((item) => (
-                                        <Col md="4" key={item.title}>
-                                            <figure className="mb-0">
-                                                <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
-
-                                                <figcaption className="text-uppercase text-center descriptions with-space pb-0">
-                                                    {item.title}
-                                                </figcaption>
-                                            </figure>
-                                        </Col>
-                                    ))}
+                                    {this.renderFestival(this.state.festival)}
                                 </Row>
                             </Container>
-                            <img class="img-fluid" src={ImgFestivalDecorationTopLeft} alt="Decoration" />
-                            <img class="img-fluid" src={ImgDecorationCloud} alt="Decoration" />
-                            <img class="img-fluid" src={ImgDecorationCloud} alt="Decoration" />
+                            <img className="img-fluid" src={ImgFestivalDecorationTopLeft} alt="Decoration" />
+                            <img className="img-fluid" src={ImgDecorationCloud} alt="Decoration" />
+                            <img className="img-fluid" src={ImgDecorationCloud} alt="Decoration" />
                         </div>
                     </section>
                     <section className="entertainment with-space">
@@ -324,23 +351,16 @@ class Festival extends Component {
                                     {this.state.entertainment.title}
                                 </h2>
                                 <Row>
-                                    {this.state.entertainment.items.map((item) => (
-                                        <Col md="4" key={item.title}>
-                                            <figure className="mb-0">
-                                                <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
-
-                                                <figcaption className="text-uppercase text-center descriptions with-space pb-0">
-                                                    {item.title}
-                                                </figcaption>
-                                            </figure>
-                                        </Col>
-                                    ))}
+                                    {this.renderEntertainment(this.state.entertainment)}
                                 </Row>
                             </Container>
-                            <img class="img-fluid" src={ImgDecorationCloudLeft} alt="Decoration" />
-                            <img class="img-fluid" src={ImgEntertainmentDecorationTop} alt="Decoration" />
-                            <img class="img-fluid" src={ImgDecorationCloudRight} alt="Decoration" />
+                            <img className="img-fluid" src={ImgDecorationCloudLeft} alt="Decoration" />
+                            <img className="img-fluid" src={ImgEntertainmentDecorationTop} alt="Decoration" />
+                            <img className="img-fluid" src={ImgDecorationCloudRight} alt="Decoration" />
                         </div>
+                    </section>
+                    <section className="with-space">
+                        <img className="img-fluid" src={ImgFooter} alt="Decoration" />
                     </section>
                 </StyledFestival>
             </React.Fragment>
