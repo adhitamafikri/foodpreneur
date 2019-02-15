@@ -4,11 +4,8 @@ import {
 } from 'polished'
 
 import {ImgHero} from './images'
-import Font1 from '../../../assets/Fonts/GothamPro/GothamPro.ttf'
 
 const StyledFestival = Styled.main`
-    @import url('https://fonts.googleapis.com/css?family=Lato');
-
     overflow: hidden;
     font-size: 19px;
 
