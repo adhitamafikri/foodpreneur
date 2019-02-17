@@ -1,21 +1,38 @@
 @import '../_variables';
 .big-resto {
-	.container--header {
-	  	display: flex;
-		justify-content: space-between;
-		clip-path: polygon(0 0, 0 65%, 100% 85%, 100% 0);
-	  	background-image: url('../../../assets/BigResto/banner.png');
-	  	background-position: 0px -70px;
-	  	background-size: 100%;
-	  	background-repeat: no-repeat;
-	  &::before {
-	  	  width:60%;
-	  	  background: rgba(255, 255, 255, 0.57);
-		  height: 100%;
-		  content: "";
-		  display: block;
-		  position: absolute;
-	  }
+	.container-bigresto{
+	    display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+		&--header {
+		  	display: flex;
+			justify-content: space-between;
+			clip-path: polygon(0 0, 0 70%, 100% 85%, 100% 0);
+		  	background-image: url('../../../assets/BigResto/banner.png');
+		  	background-position: 0px -70px;
+		  	background-size: 100%;
+		  	background-repeat: no-repeat;
+			&::before {
+			  width:60%;
+			  background: rgba(255, 255, 255, 0.57);
+			  height: 100%;
+			  content: "";
+			  display: block;
+			  position: absolute;
+			}
+		}
+		&--brand {
+		    margin-bottom: 100px;
+		}
+
+		&--footer {
+		    padding-top: 80px;
+		    padding-bottom: 80px;
+
+		    h2 {
+		    	margin-bottom: 50px;
+		    }
+		}
 	}
 
 	.ornament {
@@ -26,7 +43,18 @@
 	  background-repeat: no-repeat;
 	  &--red {
 	    background-color: #E3185D;
-	    clip-path: polygon(0 0, 0 58%, 100% 88%, 100% 0);
 	  }
+	  &--header {
+	    clip-path: polygon(0 0, 0 20%, 100% 45%, 100% 0);
+	  }
+	  &--footer {
+	  	clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 15%);
+	    height: 90%;
+	  }
+	}
+	.list-brand {
+		.ant-avatar {
+			margin-top:20px;
+		}
 	}
 }
