@@ -1,116 +1,127 @@
-import React from 'react';
+import React, {Component, Fragment} from 'react'
 import {
-  Row,
-  Col,
-  Button } from 'antd';
+    Container,
+    Row,
+    Col
+} from 'reactstrap'
 
-import { Figure, Img } from '../../common';
-import { H2, Paragraph } from '../../typography';
-import { FullHeightContainer } from './style';
+import {
+    ImgLogo,
+    ImgAbout,
+    ImgRules,
+    ImgSubmission,
+    ImgFacebook,
+    ImgInstagram
+} from './images'
 
-import FoodpreneurCompetition from '../../../assets/Competition/foodpreneur-competition.png';
-import FoodpreneurSubmission from '../../../assets/Competition/foodpreneur-submission.png';
+import StyledCompetition from './style'
 
-import '../../stylesheets/pages/competition.scss';  
+class Competition extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+        }
+    }
 
-const Competition = () => (
-  <React.Fragment>
-    <div className="competition">
-      <section className="CompetitionDescription">
-        <FullHeightContainer className="container container--desc">
-          <div className="ornament ornament--blue"></div>
-          <Row style={{ width: '100%' }}>
-            <Col lg={{ span: 10, offset: 1 }} style={{ display: 'flex', justifyContent: 'center' }}>
-              <Figure width={300} height={300}>
-                <Img src={FoodpreneurCompetition} alt="Foodpreneur Competition"
-                    width={100} unit="%" />
-              </Figure>
-            </Col>
-            <Col lg={{ span: 10, offset: 1 }} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '300px' }}>
-              <Paragraph size="paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Aut saepe tenetur doloribus possimus obcaecati, et unde itaque numquam repellendus aspernatur quisquam 
-                eius ex quam inventore nesciunt autem assumenda temporibus. 
-                Possimus molestias, molestiae fugit at perspiciatis magnam nostrum harum blanditiis 
-                distinctio porro nesciunt quae aliquam exercitationem?
-              </Paragraph>
-            </Col>
-          </Row>
-        </FullHeightContainer>
-      </section>
+    render() {
+        return (
+            <Fragment>
+                <StyledCompetition>
+                    <section className="hero">
+                        <div className="hero-content-container">
+                            <div className="hero-content-wrapper">
+                                <div className="hero-clip-path"></div>
+                                <div className="hero-content">
+                                    <Container>
+                                        <Row className="align-items-center">
+                                            <Col md="6">
+                                                <img className="img-fluid mx-auto d-block" src={ImgLogo} alt="competition" />
+                                            </Col>
+                                            <Col md="6" className="text-justify">
+                                                Dolor eu cupidatat dolore aliquip occaecat magna id cupidatat. Nostrud minim enim excepteur Lorem nisi voluptate. Sit aute ex commodo cupidatat ullamco. Consequat dolor eu Lorem laboris eu. Nostrud aute labore amet excepteur consectetur ipsum ipsum esse officia occaecat est laborum incididunt. Id mollit in consectetur quis cillum culpa aliquip aliqua. Anim ut excepteur labore proident laboris.
+                                            </Col>
+                                        </Row>
+                                    </Container>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section className="about with-space">
+                        <div className="about-content-container">
+                            <div className="about-clip-path"></div>
+                            <div className="about-content">
+                                <Container>
+                                    <Row className="align-items-center">
+                                        <Col md="4">
+                                        </Col>
+                                        <Col md="8" className="text-justify">
+                                            <h2 className="text-uppercase title title-lg">about</h2>
+                                            <p className="descriptions">
+                                                Dolor eu cupidatat dolore aliquip occaecat magna id cupidatat. Nostrud minim enim excepteur Lorem nisi voluptate. Sit aute ex commodo cupidatat ullamco. Consequat dolor eu Lorem laboris eu. Nostrud aute labore amet excepteur consectetur ipsum ipsum esse officia occaecat est laborum incididunt. Id mollit in consectetur quis cillum culpa aliquip aliqua. Anim ut excepteur labore proident laboris.
+                                            </p>
+                                        </Col>
+                                        <img className="img-fluid mx-auto d-block" src={ImgAbout} alt="rules" />
+                                    </Row>
+                                </Container>
+                            </div>
+                        </div>
+                    </section>
+                    <section className="rules with-space">
+                        <div className="rules-content-container">
+                            <div className="rules-clip-path"></div>
+                            <div className="rules-content">
+                                <Container>
+                                    <Row className="align-items-center">
+                                        <Col md="6" className="text-justify">
+                                            <h2 className="text-uppercase title title-lg">rules</h2>
+                                            <p className="descriptions">
+                                                Dolor eu cupidatat dolore aliquip occaecat magna id cupidatat. Nostrud minim enim excepteur Lorem nisi voluptate. Sit aute ex commodo cupidatat ullamco. Consequat dolor eu Lorem laboris eu. Nostrud aute labore amet excepteur consectetur ipsum ipsum esse officia occaecat est laborum incididunt. Id mollit in consectetur quis cillum culpa aliquip aliqua. Anim ut excepteur labore proident laboris.
+                                            </p>
+                                        </Col>
+                                        <Col md="6">
+                                        </Col>
+                                        <img className="img-fluid mx-auto d-block" src={ImgRules} alt="rules" />
+                                    </Row>
+                                </Container>
+                            </div>
+                        </div>
+                    </section>
+                    <section className="submission">
+                        <Container>
+                            <h2 className="text-uppercase text-right title title-lg mb-0">submission</h2>
+                        </Container>
+                        <div className="submission-content-container with-space">
+                            <div className="submission-content">
+                                <Container>
+                                    <Row>
+                                        <Col md="8" className="text-justify">
+                                            <img className="img-fluid mx-auto d-block" src={ImgSubmission} alt="submission" />
+                                            <ul className="list-unstyled list-inline">
+                                                <li className="list-inline-item">
+                                                    <img className="img-fluid" src={ImgFacebook} alt="facebook" />
+                                                    <a href="">Ralali.com</a>
+                                                </li>
+                                                <li className="list-inline-item">
+                                                    <img className="img-fluid" src={ImgInstagram} alt="instagram" />
+                                                    <a href="">Ralali.com</a>
+                                                </li>
+                                            </ul>
+                                        </Col>
+                                        <Col md="4">
+                                            <p className="descriptions">
+                                                Dolor eu cupidatat dolore aliquip occaecat magna id cupidatat. Nostrud minim enim excepteur Lorem nisi voluptate. Sit aute ex commodo cupidatat ullamco. Consequat dolor eu Lorem laboris eu. Nostrud aute labore amet excepteur consectetur ipsum ipsum esse officia occaecat est laborum incididunt. Id mollit in consectetur quis cillum culpa aliquip aliqua. Anim ut excepteur labore proident laboris.
+                                            </p>
+                                            <button type="button" className="btn btn-large w-100 btn-warning text-uppercase">submit here</button>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                            </div>
+                        </div>
+                    </section>
+                </StyledCompetition>
+            </Fragment>
+        )
+    }
+}
 
-      <section className="CompetitionAbout">
-        <FullHeightContainer className="container container--about">
-          <div className="ornament ornament--green"></div>
-          <Row style={{ width: '100%' }}>
-            <Col lg={{ span: 10, offset: 1 }}>
-              <Figure>
-                {/* <Img src={FoodpreneurAbout} alt="Foodpreneur About" /> */}
-              </Figure>
-            </Col>
-            <Col lg={{ span: 10, offset: 1 }}>
-              <H2 size="H2" color="white" weight="bold">
-                About
-              </H2>
-              <Paragraph size="paragraph" color="white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia in labore pariatur quaerat quod ullam,
-                dicta iusto hic excepturi! Quaerat soluta praesentium ad ab inventore
-                delectus perferendis consequatur dolore assumenda.
-              </Paragraph>
-            </Col>
-          </Row>
-        </FullHeightContainer>
-      </section>
-
-      <section className="CompetitionRules">
-        <FullHeightContainer className="container container--rules">
-          <div className="ornament ornament--orange"></div>
-          <Row style={{ width: '100%' }}>
-            <Col lg={{ span: 6, offset: 4 }}>
-              <H2 size="H2" color="white" weight="bold">
-                Rules
-              </H2>
-              <Paragraph size="paragraph" color="white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia in labore pariatur quaerat quod ullam,
-                dicta iusto hic excepturi! Quaerat soluta praesentium ad ab inventore
-                delectus perferendis consequatur dolore assumenda.
-              </Paragraph>
-            </Col>
-            <Col lg={{ span: 10, offset: 1 }}>
-              <Figure>
-                {/* <Img src={}></Img> */}
-              </Figure>
-            </Col>
-          </Row>
-        </FullHeightContainer>
-      </section>
-
-      <section className="CompetitionSubmission">
-        <FullHeightContainer className="container container--submission">
-          <div className="ornament ornament--black"></div>
-          <Row style={{ width: '100%' }}>
-            <Col lg={{ span: 14, offset: 1 }}>
-              <Figure width={300} height={200}>
-                <Img src={FoodpreneurSubmission} alt="Foodpreneur Submission"
-                    width={100} unit="%" />
-              </Figure>
-            </Col>
-            <Col lg={{ span: 5, offset: 1 }}>
-              <H2 size="H2" color="white" weight="bold">
-                Submission
-              </H2>
-              <Paragraph size="paragraph" color="white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia in labore pariatur quaerat quod ullam,
-                dicta iusto hic excepturi! Quaerat soluta praesentium ad ab inventore
-                delectus perferendis consequatur dolore assumenda.
-              </Paragraph>
-              <Button className="btn-submit">SUBMIT HERE</Button>
-            </Col>
-          </Row>
-        </FullHeightContainer>
-      </section>
-    </div>
-  </React.Fragment>
-);
-
-export default Competition;
+export default Competition

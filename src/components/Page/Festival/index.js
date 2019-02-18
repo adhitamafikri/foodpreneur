@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component, Fragment} from 'react'
 import {
     Container,
     Row,
@@ -44,6 +44,7 @@ import {
     ImgDecorationCloudRight,
     ImgFooter
 } from './images'
+
 import StyledFestival from './style'
 
 class Festival extends Component {
@@ -270,7 +271,7 @@ class Festival extends Component {
 
     render() {
         return (
-            <React.Fragment>
+            <Fragment>
                 <StyledFestival>
                     <section className="hero">
                         <div className="hero-content-container">
@@ -363,7 +364,7 @@ class Festival extends Component {
                         <img className="img-fluid" src={ImgFooter} alt="Decoration" />
                     </section>
                 </StyledFestival>
-            </React.Fragment>
+            </Fragment>
         )
     }
 }
