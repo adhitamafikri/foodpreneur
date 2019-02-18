@@ -24,30 +24,6 @@ const StyledCompetition = Styled.main`
         font-weight: bold;
     }
 
-    .title-line {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            width: 100%;
-            border-bottom: 4px solid #929497;
-            z-index: 1;
-        }
-
-        
-        .text {
-            background: white;
-            padding-left: 20px;
-            padding-right: 20px;
-            z-index: 2;
-        }
-    }
-
     [class$="content-container"] > .img-fluid {
         position: absolute;
     }
@@ -159,7 +135,7 @@ const StyledCompetition = Styled.main`
             .img-fluid {
                 position: absolute;
                 max-width: 750px;
-                top: -20%;
+                top: -110px;
                 right: -20%;
             }
         }
@@ -179,9 +155,15 @@ const StyledCompetition = Styled.main`
             clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
 
             .submission-content {
+                
+                [class^="col"] {
+                    height: 650px;
+                }
 
                 .list-inline {
-                    margin-top: 80px;
+                    position: absolute;
+                    bottom: 0;
+                    margin-bottom: 10px;
 
                     .list-inline-item {
                         margin-right: 50px;
@@ -205,7 +187,8 @@ const StyledCompetition = Styled.main`
                 }
 
                 .btn {
-                    margin-top: 80px;
+                    position: absolute;
+                    bottom: 0;
                     font-size: 30px;
                 }
             }
