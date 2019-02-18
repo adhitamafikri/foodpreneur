@@ -5,6 +5,7 @@
 	    justify-content: space-between;
 	    align-items: center;
 		&--header {
+			align-items: initial;
 		  	display: flex;
 			justify-content: space-between;
 			clip-path: polygon(0 0, 0 70%, 100% 85%, 100% 0);
@@ -26,12 +27,8 @@
 		}
 
 		&--footer {
-		    padding-top: 80px;
+		    padding-top: 150px;
 		    padding-bottom: 80px;
-
-		    h2 {
-		    	margin-bottom: 50px;
-		    }
 		}
 	}
 
@@ -45,7 +42,8 @@
 	    background-color: #E3185D;
 	  }
 	  &--header {
-	    clip-path: polygon(0 0, 0 20%, 100% 45%, 100% 0);
+			background-image: url('../../../assets/BigResto/strip.png');
+			top: 26%;
 	  }
 	  &--footer {
 	  	clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 15%);
@@ -55,6 +53,38 @@
 	.list-brand {
 		.ant-avatar {
 			margin-top:20px;
+			align-items: center;
+			justify-content: center;
+			display: flex;
+			&--small {
+				padding: 20px;
+				background-color: #d8d8d8;
+				
+			}
+		}
+		.small-brands {
+			.row:nth-child(odd) > .col {
+				&:nth-child(odd) > .ant-avatar--small {
+					background-color: #fb91b5;
+				}
+			}
+			.row:nth-child(even) > .col {
+				&:nth-child(even) > .ant-avatar--small {
+					background-color: #fb91b5;
+				}
+			}
+		}
+	}
+	.festival, .competition {
+		position: relative;
+		text-align: center;
+		color: #901f54;
+		margin-top:40px;
+		div {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 	}
 }

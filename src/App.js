@@ -40,7 +40,6 @@ class App extends Component {
           </Header>
           
           <Content className="main">
-            <Navigation />
             <Route exact path="/" component={BigResto} />
             <Route path="/competition" component={Competition} />
             <Route path="/festival" component={Festival} />
