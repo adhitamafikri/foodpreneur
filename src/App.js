@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
-import { Layout, Menu } from 'antd'
+import { BrowserRouter, Route } from 'react-router-dom';
+import { Layout, Drawer, Button } from 'antd'
 import 'antd/dist/antd.css';
 
 import Navigation from './components/Navigation';
+import LeftMenu from './components/LeftMenu';
 import Competition from './components/Page/Competition';
 import Festival from './components/Page/Festival';
 import BigResto from './components/Page/BigResto';
-
 import './components/stylesheets/main.scss';
 
 const {
@@ -15,30 +15,41 @@ const {
 } = Layout;
 
 class App extends Component {
+  state = {
+    current: 'mail',
+    visible: false
+  }
+  showDrawer = () => {
+    this.setState({
+      visible: true,
+    });
+  };
+onClose = () => {
+    this.setState({
+      visible: false,
+    });
+  };
   render() {
     return (
       <BrowserRouter>
-        <Layout className="App" style={{background: '#fff'}}>
+        <Layout className="App" style={{ background: '#fff' }}>
           <Header style={{ position: 'fixed', zIndex: 1, width: '100%', background: '#fff' }}>
-            <div className="logo" />
-            <Menu
-              theme="light"
-              mode="horizontal"
-              defaultSelectedKeys={['1']}
-              style={{ lineHeight: '64px' }}
+            <Navigation />
+            <Button className="barsMenu d-lg-none" 
+            type="default" 
+            onClick={this.showDrawer} 
+            icon="menu-fold" size="large"></Button>
+            <Drawer
+              title="Basic Drawer"
+              placement="right"
+              closable={false}
+              onClose={this.onClose}
+              visible={this.state.visible}
             >
-              <Menu.Item key="1">
-                <Link to="/">Home</Link>
-              </Menu.Item>
-              <Menu.Item key="2">
-                <Link to="/competition">Competition</Link>
-              </Menu.Item>
-              <Menu.Item key="3">
-                <Link to="/festival">Festival</Link>
-              </Menu.Item>
-            </Menu>
+              <LeftMenu />
+            </Drawer>
           </Header>
-          
+
           <Content className="main">
             <Route exact path="/" component={BigResto} />
             <Route path="/competition" component={Competition} />

@@ -1,20 +1,42 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-
+import {
+  NavLink,
+  Link,
+  withRouter
+} from 'react-router-dom';
+import {
+  Menu,
+  BackTop
+} from 'antd'
+import PropTypes from "prop-types";
 import StyledNavigation from './style';
 
-const Navigation = () => (
-  <StyledNavigation>
-    <NavLink to="/">
-      <p>Big Resto</p>
-    </NavLink>
-    <NavLink to="/festival">
-      <p>Festival</p>
-    </NavLink>
-    <NavLink to="/competition">
-      <p>Competition</p>
-    </NavLink>
-  </StyledNavigation>
-);
+class NavigationMenu extends React.Component {
+
+  render() {
+    const { location } = this.props;
+
+    return (
+      <Menu
+        theme="light"
+        mode="horizontal"
+        className="d-none d-md-none d-lg-block"
+        selectedKeys={[location.pathname]}
+        style={{ lineHeight: '63px' }}
+      >
+          <Menu.Item key="/">
+            <Link to="/">Home</Link>
+          </Menu.Item>
+          <Menu.Item key="/competition">
+            <Link to="/competition">Competition</Link>
+          </Menu.Item>
+          <Menu.Item key="/festival">
+            <Link to="/festival">Festival</Link>
+          </Menu.Item>
+      </Menu>
+    );
+  }
+}
+const Navigation = withRouter(NavigationMenu);
 
 export default Navigation;

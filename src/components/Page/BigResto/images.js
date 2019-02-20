@@ -14,5 +14,6 @@ const images = {
     },
     competition: require('../../../assets/BigResto/competition.jpg'),
     festival: require('../../../assets/BigResto/festival.jpg'),
+    heroBanner: require('../../../assets/BigResto/banner.png'),
 }
 export default images;
