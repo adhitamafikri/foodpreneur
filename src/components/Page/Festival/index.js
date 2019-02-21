@@ -213,7 +213,7 @@ class Festival extends Component {
                 ))
             } else {
                 column = row.items.map((item) => (
-                    <Col md="2" key={item.title}>
+                    <Col md="4" lg="2" key={item.title}>
                         <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
                     </Col>
                 ))
@@ -231,9 +231,11 @@ class Festival extends Component {
         return data.items.map((item) => (
             <Col md="4" key={item.title}>
                 <figure className="mb-0">
-                    <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
+                    <div className="img-wrapper">
+                        <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
+                    </div>
 
-                    <figcaption className="text-uppercase text-center descriptions with-space pb-0">
+                    <figcaption className="text-uppercase text-center descriptions">
                         {item.title}
                     </figcaption>
                 </figure>
@@ -245,9 +247,11 @@ class Festival extends Component {
         return data.items.map((item) => (
             <Col md="4" key={item.title}>
                 <figure className="mb-0">
-                    <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
+                    <div className="img-wrapper">
+                        <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
+                    </div>
 
-                    <figcaption className="text-uppercase text-center descriptions with-space pb-0">
+                    <figcaption className="text-uppercase text-center descriptions">
                         {item.title}
                     </figcaption>
                 </figure>
@@ -259,9 +263,11 @@ class Festival extends Component {
         return data.items.map((item) => (
             <Col md="4" key={item.title}>
                 <figure className="mb-0">
-                    <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
+                    <div className="img-wrapper">
+                        <img className="img-fluid mx-auto d-block" src={item.img} alt={item.title} />
+                    </div>
 
-                    <figcaption className="text-uppercase text-center descriptions with-space pb-0">
+                    <figcaption className="text-uppercase text-center descriptions">
                         {item.title}
                     </figcaption>
                 </figure>

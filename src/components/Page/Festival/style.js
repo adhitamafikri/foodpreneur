@@ -1,5 +1,6 @@
 import Styled from 'styled-components'
 import {rgba} from 'polished'
+import {mq_max} from '../../../styles/Utils/Breakpoints'
 
 import {ImgHero} from './images'
 
@@ -54,6 +55,22 @@ const StyledFestival = Styled.main`
         position: absolute;
     }
 
+    ${mq_max.xl`
+        font-size: 14px;
+
+        .title-lg {
+            font-size: 36px;
+        }
+
+        .descriptions {
+            font-size: 19px;
+        }
+    `}
+
+    ${mq_max.md`
+        font-size: 12px;
+    `}
+
     .hero,
     .foods {
         font-family: 'Gotham Pro';
@@ -66,13 +83,13 @@ const StyledFestival = Styled.main`
         width: 100%;
         clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
-        .hero-content-container {
+        &-content-container {
             display: flex;
             align-items: center;
             height: 600px;
         }
 
-        .hero-clip-path {
+        &-clip-path {
             background: linear-gradient( ${rgba('#ed1e79', .8)}, ${rgba('#ed1e79', .8)});
             height: 500px;
             clip-path: polygon(0 10%, 100% 20%, 100% 80%, 0 90%);
@@ -84,7 +101,7 @@ const StyledFestival = Styled.main`
             }
         }
 
-        .hero-content {
+        &-content {
             position: absolute;
             width: 100%;
             left: 0;
@@ -94,6 +111,28 @@ const StyledFestival = Styled.main`
                 max-width: 500px;
             }
         }
+
+        ${mq_max.xl`
+            .hero-content .img-fluid {
+                max-width: 300px;
+            }
+        `}
+
+        ${mq_max.md`
+            .hero-content .img-fluid {
+                max-width: 200px;
+                margin-top: -150px;
+                margin-bottom: 40px;
+            }
+        `}
+
+        ${mq_max.sm`
+            .hero-content .img-fluid {
+                max-width: 150px;
+                margin-top: -110px;
+                margin-bottom: 25px;
+            }
+        `}
     }
 
     .foods .foods-content-container {        
@@ -115,6 +154,28 @@ const StyledFestival = Styled.main`
             max-width: 500px;
             margin-top: -110px;
         }
+
+        ${mq_max.xl`
+            > .img-fluid {
+                display: none;
+            }
+
+            .container .img-fluid {
+                max-width: 250px;
+                margin-top: -90px;
+            }
+        `}
+
+        ${mq_max.md`
+            > .img-fluid {
+                display: none;
+            }
+
+            .container .img-fluid {
+                max-width: 250px;
+                margin-top: 60px;
+            }
+        `}
     }
 
     .support .row {
@@ -130,6 +191,37 @@ const StyledFestival = Styled.main`
                 padding: 0
             }
         }
+
+        ${mq_max.xl`
+            .img-fluid {
+                max-width: 135px;
+            }
+
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            &:nth-of-type(4) {
+                .col-lg-2 {
+                    display: flex;
+                    align-items: center;
+                    height: 120px
+                }
+            }
+
+            &:first-of-type {
+                padding-bottom: 70px;
+                
+                .img-fluid {
+                    max-width: 150px;
+                    padding: 0
+                }
+            }
+        `}
+
+        ${mq_max.md`
+            &:first-of-type [class^="col"]:last-of-type .img-fluid {
+                margin-top: 100px;
+            }
+        `}
     }
 
     .edutainment,
@@ -141,7 +233,7 @@ const StyledFestival = Styled.main`
     .festival,
     .entertainment {
         .container {
-            .img-fluid {
+            .img-wrapper {
                 height: 325px;
             }
 
@@ -149,13 +241,58 @@ const StyledFestival = Styled.main`
             .descriptions {
                 font-family: 'KG Inimitable Original';
             }
+
+            .descriptions {
+                padding-top: 60px;
+            }
         }
+
+        ${mq_max.xl`
+            &-content-container .img-fluid {
+                display: none;
+            }
+            
+            .container {
+                .img-wrapper {
+                    height: 260px;
+                }
+            }
+        `}
+
+        ${mq_max.lg`
+            .container {
+                .img-wrapper {
+                    height: 195px;
+                }
+            }
+        `}
+
+        ${mq_max.md`
+            .container {
+                .img-wrapper {
+                    height: auto;
+
+                    .img-fluid {
+                        max-width: 200px;
+                    }
+                }
+
+                .descriptions {
+                    padding-top: 40px;
+                    padding-bottom: 60px;
+                }
+            }
+
+            [class^="col"]:last-of-type .descriptions {
+                padding-bottom: 0;
+            }
+        `}
     }
 
     .edutainment {
         margin-top: 100px;
 
-        .edutainment-content-container {
+        &-content-container {
             > .img-fluid {
                 &:first-of-type {
                     top: -115px;
@@ -180,7 +317,7 @@ const StyledFestival = Styled.main`
             .descriptions {
                 color: #e3185d;
             }
-        }   
+        } 
     }
 
     .festival .festival-content-container {
