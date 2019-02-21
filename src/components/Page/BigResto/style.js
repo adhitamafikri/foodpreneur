@@ -42,6 +42,49 @@ const StyledBigResto = Styled.main `
                 font-size: 15px;
             }
         }
+
+        @media(max-width: 992px){
+            &--clip {
+                background: linear-gradient(to right, 
+                    rgba(255, 255, 255, 0.62) 0%,
+                    rgba(255, 255, 255, 0.62) 80%, 
+                    transparent 80%, 
+                    transparent 100%);
+            }
+
+            &-content > .desc {
+                font-size: 13px;
+            }
+        }
+
+        @media(max-width: 720px){
+            &--clip {
+                background: linear-gradient(to right, 
+                    rgba(255, 255, 255, 0.62) 0%,
+                    rgba(255, 255, 255, 0.62) 100%, 
+                    transparent 100%, 
+                    transparent 100%);
+            }
+        }
+        @media(max-width: 590px){
+            .hero-content {
+                padding: 10px 20px;
+                font-size: 11px;
+            }
+        }
+    }
+
+
+    @media(max-width: 720px){
+        h2 {
+            font-size: 50px;
+        }
+    }
+
+    @media(max-width: 500px){
+        h2 {
+            font-size: 30px;
+        }
     }
     .footer {
         padding: 100px 0;
@@ -64,6 +107,11 @@ const StyledBigResto = Styled.main `
         .desc {
             text-size: 14px;
             color: #fff;
+        }
+
+
+        @media(max-width: 810px){
+            padding: 120px 0;
         }
     }
 `

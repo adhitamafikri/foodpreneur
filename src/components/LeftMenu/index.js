@@ -6,11 +6,15 @@ import {
   withRouter
 } from 'react-router-dom';
 class LeftMenu extends Component {
+  scrollTop () {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <Menu
         theme="light"
         mode="inline"
+        onClick={this.scrollTop}
        >
       <Menu.Item key="/">
         <Link to="/">Home</Link>

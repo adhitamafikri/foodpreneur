@@ -36,13 +36,13 @@ class Competition extends Component {
                 {
                     id: 'r1',
                     name: 'Ralali.com',
-                    link: 'https://www.facebook.com/',
+                    link: 'https://www.facebook.com/ralalicom/',
                     img: ImgFacebook,
                 },
                 {
                     id: 'r2',
-                    name: 'Ralali.com',
-                    link: 'https://www.instagram.com/',
+                    name: '@ralalicom',
+                    link: 'http://instagram.com/ralalicom',
                     img: ImgInstagram
                 }
             ]
@@ -53,14 +53,11 @@ class Competition extends Component {
         return this.state.social_media.map(item => (
             <li className="list-inline-item" key={item.id}>
                 <img className="img-fluid" src={item.img} alt={item.name} />
-                <a href={item.link}>{item.name}</a>
+                <a href={item.link} target="_blank">{item.name}</a>
             </li>
         ))
     }
 
-    componentDidMount() {
-        window.scrollTo(0, 0)
-    }
 
     render() {
         return (
@@ -91,9 +88,7 @@ class Competition extends Component {
                             <div className="about-content">
                                 <Container>
                                     <Row className="align-items-center">
-                                        <Col md="4">
-                                        </Col>
-                                        <Col md="8" className="text-justify">
+                                        <Col md={{size:7, offset: 5}} sm={{ size: 8, offset: 4}} xs={{ size: 8, offset: 4}} className="text-justify">
                                             <h2 className="text-uppercase title title-lg">{this.state.about.title}</h2>
                                             <p className="descriptions">
                                                 {this.state.about.descriptions}
@@ -111,7 +106,7 @@ class Competition extends Component {
                             <div className="rules-content">
                                 <Container>
                                     <Row className="align-items-center">
-                                        <Col md="6" className="text-justify">
+                                        <Col md="6" sm={7} xs={7} className="text-justify">
                                             <h2 className="text-uppercase title title-lg">{this.state.rules.title}</h2>
                                             <p className="descriptions">
                                                 {this.state.rules.descriptions}
@@ -132,20 +127,26 @@ class Competition extends Component {
                         <div className="submission-content-container with-space">
                             <div className="submission-content">
                                 <Container>
-                                    <Row>
-                                        <Col md="8" className="text-justify">
+                                    <Row className="top">
+                                        <Col lg={7} md="6" sm={12} className="text-justify">
                                             <img className="img-fluid mx-auto d-block" src={ImgSubmission} alt="submission" />
+                                        </Col>
+                                        <Col lg={5} md="6" sm={12}>
+                                            <p className="descriptions">
+                                                {this.state.submission.descriptions}
+                                            </p>
+                                        </Col>
+                                    </Row>
+                                    <div className="bottom">
+                                        <Col lg={7} md="6" sm={12} xs={12} className="text-justify">
                                             <ul className="list-unstyled list-inline">
                                                 {this.renderSocialMedia()}
                                             </ul>
                                         </Col>
-                                        <Col md="4">
-                                            <p className="descriptions">
-                                                {this.state.submission.descriptions}
-                                            </p>
+                                        <Col lg={5} md="6" sm={12} xs={12}>
                                             <button type="button" className="btn btn-large w-100 btn-warning text-uppercase">submit here</button>
                                         </Col>
-                                    </Row>
+                                    </div>
                                 </Container>
                             </div>
                         </div>
