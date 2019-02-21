@@ -1,6 +1,7 @@
 import Styled from 'styled-components'
 import {rgba} from 'polished'
 
+import {mq_max} from '../../../styles/Utils/Breakpoints'
 import {ImgHero} from './images'
 
 const StyledCompetition = Styled.main`
@@ -27,6 +28,29 @@ const StyledCompetition = Styled.main`
     [class$="content-container"] > .img-fluid {
         position: absolute;
     }
+
+    ${mq_max.xl`
+        font-size: 14px;
+
+        .title-lg {
+            font-size: 46px;
+        }
+
+        .with-space {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    `}
+
+    ${mq_max.xl`
+        .title-lg {
+            font-size: 36px;
+        }
+    `}
+
+    ${mq_max.md`
+        font-size: 12px;
+    `}
 
     .hero {
         background-color: #a6b728;
@@ -65,57 +89,36 @@ const StyledCompetition = Styled.main`
                 .img-fluid {
                     max-width: 500px;
                 }
-
-                @media(max-width: 1200px){
-                    .img-fluid {
-                        max-width: 300px;
-                    }
-                    .text-justify {
-                        
-                    }
-                }
-
-                @media(max-width: 991px){
-                    .text-justify {
-                        font-size: 16px
-                        margin-top: 20px;
-                    }
-                }
-                @media(max-width: 768px){ 
-                    .img-fluid {
-                        max-width: 200px;
-                        margin-top: -80px;
-                    }
-                    .text-justify {
-                        font-size: 16px;
-                        margin-top: 17px;
-                    }
-                }
-                @media(max-width: 568px){ 
-                    .text-justify {
-                        font-size: 14px
-                    }
-                }
             }
 
-                @media(max-width: 768px){
-                    height: 500px;
-                    .hero-content-wrapper {
-                        height: 550px;
-                    }
-                    .hero-clip-path {
-                        margin-top:20px;
-                        height: 550px;
-                    }
+            ${mq_max.xl`
+                height: 650px;
+
+                .hero-content .img-fluid {
+                    max-width: 300px;
                 }
-            }
+            `}
+
+            ${mq_max.md`
+                .hero-content .img-fluid {
+                    max-width: 200px;
+                    margin-top: -200px;
+                    margin-bottom: 40px;
+                }
+            `}
+
+            ${mq_max.sm`
+                .hero-content .img-fluid {
+                    margin-bottom: 25px;
+                }
+            `}
         }
     }
 
     .about {
         background-color: #a6b728;
 
-        .about-content-container {
+        &-content-container {
             display: flex;
             align-items: center;
             height: 650px;
@@ -137,6 +140,7 @@ const StyledCompetition = Styled.main`
                 width: 100%;
                 left: 0;
                 color: white;
+
                 .img-fluid {
                     position: absolute;
                     max-width: 600px;
@@ -145,86 +149,33 @@ const StyledCompetition = Styled.main`
 
             }
 
-        }
+            ${mq_max.xl`
+                height: 500px;
 
-        @media(max-width: 1200px){
-            .about-content-container {
-                .about-content {
-                    .img-fluid {
-                        max-width: 500px;
-                    }
-                }
-            }
-        }
-
-        @media(max-width: 992px){
-            padding-top: 40px;
-            padding-bottom: 40px;
-            .about-content-container {
-                height:450px;
                 .about-clip-path {
-                    height: 550px;
+                    position: absolute;
+                    height: 500px;
+
+                    &:nth-of-type(2) {
+                        z-index: 2;
+                        background-color: ${rgba('#446340', .8)}
+                    }
                 }
 
                 .about-content {
                     .img-fluid {
-                        max-width: 400px;
-                    }
-                    h2 {
-                        font-size: 52px;
-                    }
-                    p {
-                        font-size: 17px;
+                        max-width: 450px;
                     }
                 }
-            }
-        }
-        @media(max-width: 768px){
-            padding-top: 0;
-            padding-bottom: 0; 
-            .about-content-container {
-                height: 450px;
-                .about-clip-path {
-                    height: 450px;
-                }
-                .about-content {
-                    .container {
-                        max-width: 600px;
-                    }
-                    .img-fluid {
-                        max-width: 300px;
-                    }
+            `}
 
-                    h2 {
-                        font-size: 37px;
-                    }
-                    p {
-                        font-size: 16px;
-                    }
-                }
-            }
-        }
-        @media(max-width: 568px){
-            .about-content-container {
+            ${mq_max.lg`
                 .about-content {
-                    p {
-                        font-size: 14px;
+                    [class^="col"]:last-of-type {
+                        z-index: 2;
                     }
                 }
-            }
-        }
-        @media(max-width: 500px){
-            .about-content-container {
-                .about-content {
-                    .img-fluid {
-                        max-width: 300px;
-                        left: -140px;
-                    }
-                    p {
-                        font-size: 14px;
-                    }
-                }
-            }
+            `}
         }
     }
 
@@ -232,12 +183,13 @@ const StyledCompetition = Styled.main`
         background-color: #f9a050;
         padding-top: 0;
 
-        .rules-content-container {
+        &-content-container {
             display: flex;
             align-items: center;
             height: 700px;
 
             .rules-clip-path {
+                position: absolute;
                 background-color: #f4784a;
                 height: 550px;
                 clip-path: polygon(0 10%, 95% 0, 100% 100%, 0 100%);
@@ -246,6 +198,11 @@ const StyledCompetition = Styled.main`
                 &:before {
                     display: block;
                     content: '';
+                }
+
+                &:nth-of-type(2) {
+                    z-index: 2;
+                    background-color: ${rgba('#f4784a', .8)}
                 }
             }
 
@@ -264,89 +221,42 @@ const StyledCompetition = Styled.main`
             }
         }
 
+        ${mq_max.xl`
+            &-content-container {
+                height: 550px;
 
-        @media(max-width: 1200px){
-            .rules-content-container {
-                .rules-content {
-                    .img-fluid {
-                        max-width: 500px;
-                    }
-                }
-            }
-        }
-
-        @media(max-width: 992px){
-            padding-top: 40px;
-            padding-bottom: 40px;
-            .rules-content-container {
-                height:450px;
                 .rules-clip-path {
                     height: 450px;
                 }
 
-                .rules-content {
-                    .img-fluid {
-                        max-width: 450px;
-                    }
-                    h2 {
-                        font-size: 52px;
-                    }
-                    p {
-                        font-size: 17px;
-                    }
+                .img-fluid {
+                    max-width: 600px;
+                    top: -100px;
+                    right: -150px;
                 }
             }
-        }
-        @media(max-width: 768px){
-            padding-top: 0;
-            padding-bottom: 0; 
-            .rules-content-container {
-                height: 450px;
+        `}
+
+        ${mq_max.lg`
+            &-content-container {
+                height: 550px;
+
                 .rules-clip-path {
                     height: 450px;
+                    width: 100%;
                 }
-                .rules-content {
-                    .container {
-                        max-width: 600px;
-                    }
-                    .img-fluid {
-                        max-width: 440px;
-                        right: -200px;
-                    }
 
-                    h2 {
-                        font-size: 37px;
-                    }
-                    p {
-                        font-size: 16px;
-                    }
+                .col-md-6:first-of-type {
+                    z-index: 2;
+                }
+
+                .img-fluid {
+                    max-width: 600px;
+                    top: -100px;
+                    right: -250px;
                 }
             }
-        }
-        @media(max-width: 570px){
-            .rules-content-container {
-                .rules-content {
-                    .img-fluid {
-                        max-width: 440px;
-                        right: -250px;
-                    }
-                    p {
-                        font-size: 14px;
-                    }
-                }
-            }
-        }
-        
-        @media(max-width: 470px){
-            .rules-content-container {
-                .rules-content {
-                    .img-fluid {
-                        max-width: 440px;
-                        right: -280px;
-                    }   
-                }
-            }
-        }
+        `}
     }
 
     .submission {
@@ -363,15 +273,11 @@ const StyledCompetition = Styled.main`
             clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
 
             .submission-content {
-                .top {
-                    [class^="col"] {
-                        height: 650px;
-                    }
+                [class*="col"]:nth-of-type(n+3) {
+                    margin-top: 80px;
                 }
-                
 
                 .list-inline {
-                    position: absolute;
                     bottom: 0;
                     margin-bottom: 10px;
 
@@ -393,151 +299,74 @@ const StyledCompetition = Styled.main`
                 .descriptions {
                     color: white;
                     padding-left: 15px;
-                    padding-top: 25px;
+                    padding-top: 20px;
                 }
 
                 .btn {
-                    position: absolute;
                     bottom: 0;
                     font-size: 30px;
                 }
             }
-        }
 
-        @media(max-width: 1200px){
-            .submission-content-container {
-                .submission-content {
-                    .img-fluid {
-                        max-width: 500px;
-                    }
-                }
-            }
-        }
-
-        @media(max-width: 992px){
-            padding-top: 40px;
-            padding-bottom: 40px;
-            h2 {
-                font-size:37px;
-            }
-            .submission-content-container {
-                height:550px;
-                .submission-clip-path {
-                    height: 440px;
-                }
+            ${mq_max.xl`
+                padding-top: 90px;
 
                 .submission-content {
-                    .top {
-                        height: 280px;
-                    }
-                    .btn, .list-inline {
-                        margin-top: 50px;
-                        bottom: initial;
-                        font-size: 20px;
-                        li {
-                            margin-bottom: 20px;
-                            .img-fluid {
-                                max-width: 40px;
-                            }
-                        }
-                    }
-                    .img-fluid {
-                        max-width: 350px;
-                    }
-                    p {
-                        font-size: 14px;
+                    .descriptions {
+                        padding-top: 15px;
                     }
                 }
-            }
-        }
-        @media(max-width: 768px){
-            padding-top: 0;
-            padding-bottom: 0; 
-             
-            h2 {
-                font-size: 37px;
-            }
-            .submission-content-container {
-                height: 650px;
-                .submission-clip-path {
-                    height: 450px;
-                }
+            `}
+
+            ${mq_max.lg`
                 .submission-content {
-                    .top {
-                        height: 480px;
-                    }
-                    .bottom {
-                        margin-top: 30px;
-                        [class^="col"] {
-                            height: 30px;
-                        }
-                        .btn, .list-inline {
-                            bottom: 0;
-                            left: 0;
-                            margin-top: 20px;
-                            font-size: 20px;
-                            .w-100 {
-                                width: 80%;
-                            }
-                            li {
-                                margin-top: 0;
-                                .img-fluid {
-                                    max-width: 40px;
-                                }
-                            }
-                        }
-                    }
-                    .img-fluid {
-                        max-width: 300px;
+                    [class*="col"]:nth-of-type(3) {
+                        margin-top: 0;
                     }
 
-                    h2 {
-                        font-size: 42px;
-                    }
-                    p {
-                        font-size: 15px;
+                    .list-inline-item:last-of-type {
+                        padding-top: 20px;
                     }
                 }
-            }
-        }
-        @media(max-width: 468px){
+            `}
 
-            padding-top: 0;
-            padding-bottom: 0; 
-            h2 {
-                font-size: 27px;
-            }
-            .submission-content-container {
-                height: 750px;
+            ${mq_max.md`
                 .submission-content {
-                    .top {
-                        height: 450px;
-                        [class^="col"] {
-                            height: 300px;
-                        }
+                    [class*="col"]:nth-of-type(n+3) {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 40px;
                     }
-                    .bottom {
-                        margin-top: 150px;
-                        [class^="col"] {
-                            height: 30px;
-                        }
-                        .btn, .list-inline {
-                            bottom: 0;
-                            left: 25px;
-                            font-size: 20px;
-                            max-width: 90%;
-                            li {
-                                margin-top: 0;
-                                margin-right: 20px;
-                                font-size: 17px;
-                                .img-fluid {
-                                    max-width: 30px;
-                                }
-                            }
-                        }
+
+                    .list-inline-item:last-of-type {
+                        padding-top: 0;
+                    }
+
+                    .descriptions {
+                        padding-top: 40px;
                     }
                 }
-            }
+            `}
+
+            ${mq_max.sm`
+                .submission-content {
+                    [class*="col"]:nth-of-type(3) {
+                        justify-content: start;
+                    }
+
+                    .list-inline-item {
+                        display: block;
+                        
+                        &:last-of-type {
+                            padding-top: 20px;
+                        }
+                    }
+
+                    .descriptions {
+                        padding-top: 40px;
+                    }
+                }
+            `}
         }
     }
 `

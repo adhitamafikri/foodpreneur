@@ -1,7 +1,7 @@
 import Styled from 'styled-components'
 import {rgba} from 'polished'
-import {mq_max} from '../../../styles/Utils/Breakpoints'
 
+import {mq_max} from '../../../styles/Utils/Breakpoints'
 import {ImgHero} from './images'
 
 const StyledFestival = Styled.main`
@@ -113,13 +113,13 @@ const StyledFestival = Styled.main`
         }
 
         ${mq_max.xl`
-            .hero-content .img-fluid {
+            &-content .img-fluid {
                 max-width: 300px;
             }
         `}
 
         ${mq_max.md`
-            .hero-content .img-fluid {
+            &-content .img-fluid {
                 max-width: 200px;
                 margin-top: -150px;
                 margin-bottom: 40px;
@@ -127,9 +127,8 @@ const StyledFestival = Styled.main`
         `}
 
         ${mq_max.sm`
-            .hero-content .img-fluid {
-                max-width: 150px;
-                margin-top: -110px;
+            &-content .img-fluid {
+                margin-top: -130px;
                 margin-bottom: 25px;
             }
         `}
