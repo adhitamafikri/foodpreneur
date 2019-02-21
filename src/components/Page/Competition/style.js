@@ -65,6 +65,38 @@ const StyledCompetition = Styled.main`
                 .img-fluid {
                     max-width: 500px;
                 }
+
+                @media(max-width: 1200px){
+                    .img-fluid {
+                        max-width: 300px;
+                    }
+                    .text-justify {
+                        
+                    }
+                }
+
+                @media(max-width: 991px){
+                    .text-justify {
+                        font-size: 16px
+                        margin-top: 20px;
+                    }
+                }
+                @media(max-width: 768px){ 
+                    .img-fluid {
+                        max-width: 200px;
+                    }
+                }
+            }
+
+                @media(max-width: 768px){
+                    .hero-clip-path {
+                        margin-top:20px;
+                        height: 700px;
+                    }
+                    .text-justify {
+                        font-size: 15px;
+                    }
+                }
             }
         }
     }
@@ -100,6 +132,12 @@ const StyledCompetition = Styled.main`
                 position: absolute;
                 max-width: 600px;
                 left: -20%;
+            }
+
+            @media(max-width: 1200px){
+                .img-fluid {
+                    max-width: 500px;
+                }
             }
         }
     }

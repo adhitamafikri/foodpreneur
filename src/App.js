@@ -33,7 +33,7 @@ onClose = () => {
     return (
       <BrowserRouter>
         <Layout className="App" style={{ background: '#fff' }}>
-          <Header style={{ position: 'fixed', zIndex: 1, width: '100%', background: '#fff' }}>
+          <Header style={{ position: 'fixed', zIndex: 10, width: '100%', background: '#fff' }}>
             <Navigation />
             <Button className="barsMenu d-lg-none" 
             type="default" 
@@ -41,7 +41,7 @@ onClose = () => {
             icon="menu-fold" size="large"></Button>
             <Drawer
               title="Basic Drawer"
-              placement="right"
+              placement="left"
               closable={false}
               onClose={this.onClose}
               visible={this.state.visible}

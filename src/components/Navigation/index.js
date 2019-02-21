@@ -13,6 +13,9 @@ import StyledNavigation from './style';
 
 class NavigationMenu extends React.Component {
 
+  scrollTop () {
+    window.scrollTo(0, 0);
+  }
   render() {
     const { location } = this.props;
 
@@ -23,6 +26,7 @@ class NavigationMenu extends React.Component {
         className="d-none d-md-none d-lg-block"
         selectedKeys={[location.pathname]}
         style={{ lineHeight: '63px' }}
+        onClick={this.scrollTop}
       >
           <Menu.Item key="/">
             <Link to="/">Home</Link>
