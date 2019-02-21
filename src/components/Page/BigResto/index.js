@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import {
 	Avatar
 } from 'antd';
@@ -8,7 +8,7 @@ import {
 	Container
 } from 'reactstrap';
 
-import { Figure, Img } from '../../common';
+import { Img } from '../../common';
 import { H2, Paragraph, Span } from '../../typography';
 import {
 	ImgLogo
@@ -136,20 +136,24 @@ function BigResto () {
 							</Row>
 							<Row>
 								<Col lg={12} className="competition text-center">
-									<Img src={Imgs.competition} className="img-fluid" />
-									<div>
-										<H2 size="title" color="#E3185D" weight="bold">
-											COMPETITION
-									</H2>
-									</div>
+									<a href="/competition">
+										<Img src={Imgs.competition} className="img-fluid" />
+										<div>
+											<H2 size="title" color="#E3185D" weight="bold">
+												COMPETITION
+											</H2>
+										</div>
+									</a>
 								</Col>
 								<Col lg={12} className="festival text-center">
-									<Img src={Imgs.festival} className="img-fluid" />
-									<div>
-										<H2 size="title" color="#E3185D" weight="bold">
-											FESTIVAL
-									</H2>
-									</div>
+									<a href="/festival">
+										<Img src={Imgs.festival} className="img-fluid" />
+										<div>
+											<H2 size="title" color="#E3185D" weight="bold">
+												FESTIVAL
+											</H2>
+										</div>
+									</a>
 								</Col>
 							</Row>
 						</Container>

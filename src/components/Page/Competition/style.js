@@ -84,17 +84,28 @@ const StyledCompetition = Styled.main`
                 @media(max-width: 768px){ 
                     .img-fluid {
                         max-width: 200px;
+                        margin-top: -80px;
+                    }
+                    .text-justify {
+                        font-size: 16px;
+                        margin-top: 17px;
+                    }
+                }
+                @media(max-width: 568px){ 
+                    .text-justify {
+                        font-size: 14px
                     }
                 }
             }
 
                 @media(max-width: 768px){
+                    height: 500px;
+                    .hero-content-wrapper {
+                        height: 550px;
+                    }
                     .hero-clip-path {
                         margin-top:20px;
-                        height: 700px;
-                    }
-                    .text-justify {
-                        font-size: 15px;
+                        height: 550px;
                     }
                 }
             }
@@ -126,17 +137,92 @@ const StyledCompetition = Styled.main`
                 width: 100%;
                 left: 0;
                 color: white;
-            }
-
-            .img-fluid {
-                position: absolute;
-                max-width: 600px;
-                left: -20%;
-            }
-
-            @media(max-width: 1200px){
                 .img-fluid {
-                    max-width: 500px;
+                    position: absolute;
+                    max-width: 600px;
+                    left: -20%;
+                }
+
+            }
+
+        }
+
+        @media(max-width: 1200px){
+            .about-content-container {
+                .about-content {
+                    .img-fluid {
+                        max-width: 500px;
+                    }
+                }
+            }
+        }
+
+        @media(max-width: 992px){
+            padding-top: 40px;
+            padding-bottom: 40px;
+            .about-content-container {
+                height:450px;
+                .about-clip-path {
+                    height: 550px;
+                }
+
+                .about-content {
+                    .img-fluid {
+                        max-width: 400px;
+                    }
+                    h2 {
+                        font-size: 52px;
+                    }
+                    p {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+        @media(max-width: 768px){
+            padding-top: 0;
+            padding-bottom: 0; 
+            .about-content-container {
+                height: 450px;
+                .about-clip-path {
+                    height: 450px;
+                }
+                .about-content {
+                    .container {
+                        max-width: 600px;
+                    }
+                    .img-fluid {
+                        max-width: 300px;
+                    }
+
+                    h2 {
+                        font-size: 37px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        @media(max-width: 568px){
+            .about-content-container {
+                .about-content {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        @media(max-width: 500px){
+            .about-content-container {
+                .about-content {
+                    .img-fluid {
+                        max-width: 300px;
+                        left: -140px;
+                    }
+                    p {
+                        font-size: 14px;
+                    }
                 }
             }
         }
@@ -177,6 +263,90 @@ const StyledCompetition = Styled.main`
                 right: -20%;
             }
         }
+
+
+        @media(max-width: 1200px){
+            .rules-content-container {
+                .rules-content {
+                    .img-fluid {
+                        max-width: 500px;
+                    }
+                }
+            }
+        }
+
+        @media(max-width: 992px){
+            padding-top: 40px;
+            padding-bottom: 40px;
+            .rules-content-container {
+                height:450px;
+                .rules-clip-path {
+                    height: 450px;
+                }
+
+                .rules-content {
+                    .img-fluid {
+                        max-width: 450px;
+                    }
+                    h2 {
+                        font-size: 52px;
+                    }
+                    p {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+        @media(max-width: 768px){
+            padding-top: 0;
+            padding-bottom: 0; 
+            .rules-content-container {
+                height: 450px;
+                .rules-clip-path {
+                    height: 450px;
+                }
+                .rules-content {
+                    .container {
+                        max-width: 600px;
+                    }
+                    .img-fluid {
+                        max-width: 440px;
+                        right: -200px;
+                    }
+
+                    h2 {
+                        font-size: 37px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        @media(max-width: 570px){
+            .rules-content-container {
+                .rules-content {
+                    .img-fluid {
+                        max-width: 440px;
+                        right: -250px;
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        
+        @media(max-width: 470px){
+            .rules-content-container {
+                .rules-content {
+                    .img-fluid {
+                        max-width: 440px;
+                        right: -280px;
+                    }   
+                }
+            }
+        }
     }
 
     .submission {
@@ -193,10 +363,12 @@ const StyledCompetition = Styled.main`
             clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
 
             .submission-content {
-                
-                [class^="col"] {
-                    height: 650px;
+                .top {
+                    [class^="col"] {
+                        height: 650px;
+                    }
                 }
+                
 
                 .list-inline {
                     position: absolute;
@@ -228,6 +400,142 @@ const StyledCompetition = Styled.main`
                     position: absolute;
                     bottom: 0;
                     font-size: 30px;
+                }
+            }
+        }
+
+        @media(max-width: 1200px){
+            .submission-content-container {
+                .submission-content {
+                    .img-fluid {
+                        max-width: 500px;
+                    }
+                }
+            }
+        }
+
+        @media(max-width: 992px){
+            padding-top: 40px;
+            padding-bottom: 40px;
+            h2 {
+                font-size:37px;
+            }
+            .submission-content-container {
+                height:550px;
+                .submission-clip-path {
+                    height: 440px;
+                }
+
+                .submission-content {
+                    .top {
+                        height: 280px;
+                    }
+                    .btn, .list-inline {
+                        margin-top: 50px;
+                        bottom: initial;
+                        font-size: 20px;
+                        li {
+                            margin-bottom: 20px;
+                            .img-fluid {
+                                max-width: 40px;
+                            }
+                        }
+                    }
+                    .img-fluid {
+                        max-width: 350px;
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        @media(max-width: 768px){
+            padding-top: 0;
+            padding-bottom: 0; 
+             
+            h2 {
+                font-size: 37px;
+            }
+            .submission-content-container {
+                height: 650px;
+                .submission-clip-path {
+                    height: 450px;
+                }
+                .submission-content {
+                    .top {
+                        height: 480px;
+                    }
+                    .bottom {
+                        margin-top: 30px;
+                        [class^="col"] {
+                            height: 30px;
+                        }
+                        .btn, .list-inline {
+                            bottom: 0;
+                            left: 0;
+                            margin-top: 20px;
+                            font-size: 20px;
+                            .w-100 {
+                                width: 80%;
+                            }
+                            li {
+                                margin-top: 0;
+                                .img-fluid {
+                                    max-width: 40px;
+                                }
+                            }
+                        }
+                    }
+                    .img-fluid {
+                        max-width: 300px;
+                    }
+
+                    h2 {
+                        font-size: 42px;
+                    }
+                    p {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        @media(max-width: 468px){
+
+            padding-top: 0;
+            padding-bottom: 0; 
+            h2 {
+                font-size: 27px;
+            }
+            .submission-content-container {
+                height: 750px;
+                .submission-content {
+                    .top {
+                        height: 450px;
+                        [class^="col"] {
+                            height: 300px;
+                        }
+                    }
+                    .bottom {
+                        margin-top: 150px;
+                        [class^="col"] {
+                            height: 30px;
+                        }
+                        .btn, .list-inline {
+                            bottom: 0;
+                            left: 25px;
+                            font-size: 20px;
+                            max-width: 90%;
+                            li {
+                                margin-top: 0;
+                                margin-right: 20px;
+                                font-size: 17px;
+                                .img-fluid {
+                                    max-width: 30px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

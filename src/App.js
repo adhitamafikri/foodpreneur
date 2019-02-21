@@ -40,7 +40,6 @@ onClose = () => {
             onClick={this.showDrawer} 
             icon="menu-fold" size="large"></Button>
             <Drawer
-              title="Basic Drawer"
               placement="left"
               closable={false}
               onClose={this.onClose}
