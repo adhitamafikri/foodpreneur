@@ -1,19 +1,33 @@
-const images = {
-    brands: {
-        ufsSquare: require('../../../assets/brands/ufs-square.png'),
-        cleanmatic: require('../../../assets/brands/cleanmatic.png'),
-        domo: require('../../../assets/brands/domo.png'),
-        masema: require('../../../assets/brands/masema.png'),
-        meval: require('../../../assets/brands/meval.png'),
-        modena: require('../../../assets/brands/modena.png'),
-        nissin: require('../../../assets/brands/nissin.png'),
-        sariroti: require('../../../assets/brands/sariroti.png'),
-        sharp: require('../../../assets/brands/sharp.png'),
-        ufs: require('../../../assets/brands/ufs.png'),
-        wise: require('../../../assets/brands/wise.png')
-    },
-    competition: require('../../../assets/BigResto/competition.jpg'),
-    festival: require('../../../assets/BigResto/festival.jpg'),
-    heroBanner: require('../../../assets/BigResto/banner.png'),
+import ImgLogo from '../../../assets/logo.png'
+import ImgHero from '../../../assets/BigResto/hero.png'
+import ImgUnileverFoodSolutions from '../../../assets/brands/ufs-square.png'
+import ImgCleanMatic from '../../../assets/brands/cleanmatic.png';
+import ImgDomo from '../../../assets/brands/domo.png';
+import ImgMasema from '../../../assets/brands/masema.png';
+import ImgMeval from '../../../assets/brands/meval.png';
+import ImgModena from '../../../assets/brands/modena.png';
+import ImgNissin from '../../../assets/brands/nissin.png';
+import ImgSariRoti from '../../../assets/brands/sariroti.png';
+import ImgSharp from '../../../assets/brands/sharp.png';
+import ImgWise from '../../../assets/brands/wise.png';
+import ImgBannerCompetition from '../../../assets/BigResto/competition.jpg';
+import ImgBannerFestival from '../../../assets/BigResto/festival.jpg';
+import ImgLogoFestival from '../../../assets/Festival/logo.png';
+
+export {
+    ImgLogo,
+    ImgHero,
+    ImgUnileverFoodSolutions,
+    ImgCleanMatic,
+    ImgDomo,
+    ImgMasema,
+    ImgMeval,
+    ImgModena,
+    ImgNissin,
+    ImgSariRoti,
+    ImgSharp,
+    ImgWise,
+    ImgBannerCompetition,
+    ImgBannerFestival,
+    ImgLogoFestival
 }
-export default images;

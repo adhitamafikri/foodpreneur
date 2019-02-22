@@ -22,6 +22,13 @@
   font-style: bold;
 }
 
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('../../assets/Fonts/GothamPro/GothamPro-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: 300;
+}
+
 
 div { position: relative; }
 
